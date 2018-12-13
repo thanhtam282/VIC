@@ -1,0 +1,134 @@
+.canhcam-home-1
+	overflow: hidden
+	margin-bottom: 10px
+	.block-wrapper
+		display: flex
+		+media-breakpoint-down(sm)
+			flex-direction: column
+		.info-wrapper
+			position: relative
+			flex: 0 0 40%
+			color: color-get($mau,trang)
+			+pad(r(80px) r(50px) r(80px) 0)
+			+media-breakpoint-down(md)
+				+pad(2rem 2rem 2rem 0)
+			+media-breakpoint-down(sm)
+				flex: 0 0 100%
+				+pad(2rem)
+			+media-breakpoint-down(xs)
+				+pad(2rem 1rem)
+			&:after
+				background: color-get($mau, main)
+				height: 100%
+				display: block
+				position: absolute
+				content: ""
+				z-index: -1
+				top: 0
+				right: 0
+				width: 100rem
+				+media-breakpoint-down(sm)
+					right: -50%
+			h2
+				text-transform: uppercase
+				+fz(r(30px))
+				font-weight: 500
+				+media-breakpoint-down(sm)
+					+fz(1.4rem)
+			p
+				+fz(r(15px))
+				+pad(r(25px) null)
+			.btn-more
+				position: relative
+				font-weight: 300
+				text-transform: uppercase
+				opacity: .5
+				width: r(176px)
+				height: r(36px)
+				+fz(r(15px))
+				+flex-center()
+				color: color-get($mau,trang)
+				border: 2px solid color-get($mau,trang)
+				border-radius: r(20px)
+				overflow: hidden
+				&:after
+					transition: .5s all ease-in-out
+					background: color-get($mau, dark)
+					height: 100%
+					display: block
+					position: absolute
+					content: ""
+					top: 150%
+					right: 0
+					z-index: -1
+					width: 100%
+				+media-breakpoint-up(md)
+					&:hover
+						color: color-get($mau,trang)
+						&:after
+							top: 0
+
+		.banner-info-wrapper
+			margin-left: 10px
+			flex: 0 0 60%
+			display: flex
+			+media-breakpoint-down(sm)
+				flex: 0 0 100%
+				position: relative
+				margin: 0
+			.banner
+				position: absolute
+				top: 0
+				width: 100%
+				height: 100%
+				z-index: -2
+				+media-breakpoint-down(sm)
+					width: 100vw
+					margin-left: calc(-50vw + 50%)
+				+media-breakpoint-up(lg)
+					display: block
+					width: calc((100vw - 960px)/2 + 576px)
+				+media-breakpoint-up(xl)
+					width: calc((100vw - 1140px)/2 + 684px)
+			.spec-info
+				+pad(r(80px) null r(80px) r(80px))
+				+media-breakpoint-down(md)
+					+pad(2rem null 2rem 2rem)
+				+media-breakpoint-down(sm)
+					+pad(2rem)
+				+media-breakpoint-down(xs)
+					+pad(2rem 1rem)
+				position: relative
+				// flex: 0 0 60%
+				display: flex
+				flex-direction: column
+				height: 100%
+				justify-content: center
+				+media-breakpoint-up(lg)
+					margin-left: auto
+					justify-content: space-between
+				&:after
+					background: rgba(0,57,81,.7)
+					height: 100%
+					display: block
+					position: absolute
+					content: ""
+					z-index: -1
+					top: 0
+					left: 0
+					width: 100rem
+					+media-breakpoint-down(sm)
+						left: -50%
+				figure
+					+pad(1rem null)
+					display: flex
+					align-items: center
+					border-bottom: 1px solid color-rgba(color-get($mau,trang),.2)
+					figcaption
+						h4
+							padding-left: 1rem
+							+fz(r(18px))
+							color: color-get($mau,trang)
+					&:last-child
+						border-bottom: 0
+

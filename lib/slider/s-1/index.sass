@@ -1,0 +1,38 @@
+
+.canhcam-slider-1
+	// min-height: r(360px)
+	// +media-breakpoint-down(sm)
+	// 	min-height: r(260px)
+	.list-items
+		margin-bottom: 10px
+		.item
+			figure
+				position: relative
+				figcaption
+					bottom: 0
+					position: absolute
+					text-align: center
+					+wh(100%)
+					+flex-center()
+					align-items:  flex-end
+					background-image: linear-gradient(transparent 51%,#000 111%)
+					h1
+						padding-bottom: r(60px)
+						color: color-get($mau,trang)
+						line-height: r(40px)
+						text-transform: uppercase
+						font-weight: 300
+						+fz(r(25px))
+						+media-breakpoint-down(md)
+							+fz(1.2rem)
+							+pad(null 2rem )
+							padding-bottom: 2rem
+							line-height: 1.7rem
+						+media-breakpoint-down(xs)
+							padding-bottom: 1rem
+						span
+							font-weight: 600
+							display: block
+							+fz(r(40px))
+							+media-breakpoint-down(md)
+								+fz(1.5rem)

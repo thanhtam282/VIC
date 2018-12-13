@@ -1,0 +1,47 @@
+.canhcam-footer-1
+	.social-wrapper
+		opacity: .5
+		+flex-center()
+		+pad(r(60px) null r(20px) null)
+		a
+			+mar(null 5px)
+			+media-breakpoint-up(lg)
+				// +mar(null .5rem)
+			+media-breakpoint-up(xl)
+				// +mar(null 1rem)
+			+wh(r(35px))
+			+bor-rad(50%)
+			background: transparent
+			border: 1px solid color-get($mau,trang)
+			transition: .3s all ease-in-out
+			+flex-center()
+			em
+				color: color-get($mau,trang)
+				// +fz(r(20px))
+			+media-breakpoint-down(md)
+				&:hover
+					text-decoration: none
+					// box-shadow: 0px 0px 0px 2px color-get($mau,trang) inset
+					background: color-get($mau,trang)
+					em
+						color: color-get($mau,den)
+	.info-wrapper, .copyright
+		+pad(1rem null)
+		color: color-get($mau,trang)
+		text-align: center
+		line-height: r(26px)
+		h3
+			font-weight: 600
+			+fz(1rem)
+			text-transform: uppercase
+			padding-bottom: .5rem
+		h4, p
+			font-weight: 300
+			font-size: r(14px)
+			line-height: r(26px)
+			span
+				font-weight: 600
+	.copyright
+		+pad(1trem null)
+		border-top: 1px solid color-get($mau,text-6)
+		

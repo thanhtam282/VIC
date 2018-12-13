@@ -1,9 +1,11 @@
 {
 	"styles": [
-		"bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css",
+		"bower_components/font-awesome/css/all.min.css",
 		"bower_components/linearicons/dist/web-font/style.css",
 		"bower_components/mdi/css/materialdesignicons.min.css",
 		"bower_components/offline/themes/offline-theme-default.css",
+		"bower_components/slick-carousel/slick/slick-theme.css",
+		"bower_components/slick-carousel/slick/slick.css",
 		"bower_components/offline/themes/offline-language-english.css"
 	],
 	"scripts":[
@@ -12,6 +14,8 @@
 		"plugins/bigimg.js",
 		"plugins/mapping.js",
 		"plugins/mapping-listener.js",
-		"bower_components/offline/offline.min.js"
+		"bower_components/offline/offline.min.js",
+		"bower_components/slick-carousel/slick/slick.min.js",
+		"bower_components/sticky-footer/dist/js/sticky-footer.js"
 	]
 }

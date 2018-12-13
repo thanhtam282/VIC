@@ -1,6 +1,16 @@
 @function r($size)
 	@return ($size/16px)*1rem
 
+=flex-center()
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+
+=wh($value)
+	width: $value
+	height: $value
+	
 =line($line)
 	-webkit-line-clamp: $line
 	overflow: hidden

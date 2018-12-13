@@ -20,7 +20,6 @@
 		"@babel/preset-env": "^7.1.6",
 		"@babel/register": "^7.0.0",
 		"browser-sync": "^2.26.3",
-		"node-sass": "^4.10.0",
 		"del": "^3.0.0",
 		"fs": "0.0.1-security",
 		"gulp": "^4.0.0",
@@ -33,6 +32,11 @@
 		"gulp-sass": "^4.0.2",
 		"gulp-sourcemaps": "^2.6.4",
 		"gulp-uglify-es": "^1.0.4",
-		"gulp-watch": "^5.0.1"
+		"gulp-watch": "^5.0.1",
+		"k-sass-core": "0.0.1",
+		"node-sass": "^4.10.0"
+	},
+	"dependencies": {
+		"gulp-imagemin": "^5.0.3"
 	}
 }

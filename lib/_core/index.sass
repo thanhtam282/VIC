@@ -1,7 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:300,400,500,600,700,800&subset=vietnamese')
+@font-face 
+	font-family: 'Material Icons'
+	font-style: normal
+	font-weight: 400
+	src: url(https://fonts.gstatic.com/s/materialicons/v41/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2')
+
+@import ../node_modules/bootstrap/scss/bootstrap
+@import ../bower_components/k-sass-core/dist/sass/k-sass-core-only
+
+
 p ,ul ,h1,h2,h3,h4,h5,h6,figure,div, *
 	margin: 0
 	padding: 0
+	font-weight: 300
 html, body
+	font-family:  'Encode Sans', sans-serif
 	font-size: 16px
 	line-height: 1.5
-	font-weight: normal
+	font-weight: 300
+
+.material-icons
+	font-family: 'Material Icons'
+	font-style: normal
+	font-weight: 300
+	+fz(1rem)

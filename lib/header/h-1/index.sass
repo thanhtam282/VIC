@@ -1,0 +1,439 @@
+main
+	+media-breakpoint-down(md)
+		padding-top: r(47px)
+.canhcam-header-1
+	position: fixed
+	width: 100%
+	background: white
+	border-top: 2px solid color-get($mau,dark)
+	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1)
+	z-index: 9998
+	+media-breakpoint-down(md)
+		overflow: hidden
+		position: fixed
+		width: 100%
+	.menu-bar
+		margin-top: -2px
+		display: flex
+		.logo
+			+pad(.5rem null)
+			+flex-center()
+			img
+				+media-breakpoint-down(lg)
+					max-width: 4rem
+					transform: scale(1.2)
+		.mainnav
+
+			width: 100%
+			flex-direction: column
+			display: flex
+			.nav-top
+				z-index: 9999
+				position: relative
+				display: flex
+				+media-breakpoint-down(md)
+					height: 100%
+					// margin-right: 3rem
+				&:before
+					z-index: -1
+					background: color-get($mau,dark)
+					position: absolute
+					display: block
+					content: ""
+					width: 100%
+					height: 100%
+					left: r(-52px)
+					// +media-breakpoint-up(md)
+					// 	-webkit-clip-path: circle(20% at 13% -62.5%)
+					// 	clip-path: circle(20% at 13% -62.5%)
+					+media-breakpoint-up(lg)
+						-webkit-clip-path: circle(17% at 13% -81.5%)
+						clip-path: circle(17% at 13% -81.5%)
+					+media-breakpoint-down(md)
+						+wh(0)
+				&:after
+					background-image: -moz-linear-gradient( 0deg, rgb(27,86,152) 0%, rgb(0,140,199) 100%)
+					background-image: -webkit-linear-gradient( 0deg, rgb(27,86,152) 0%, rgb(0,140,199) 100%)
+					background-image: -ms-linear-gradient( 0deg, rgb(27,86,152) 0%, rgb(0,140,199) 100%)
+					height: 100%
+					display: block
+					position: absolute
+					content: ""
+					z-index: -1
+					width: 170%
+					+media-breakpoint-down(md)
+						+wh(0)
+
+				.btn-primary
+					cursor: pointer
+					display: none
+					+media-breakpoint-down(md)
+						display: block
+						margin-left: 2rem
+						+flex-center()
+
+				.hotline
+					+pad(6px r(80px))
+					+media-breakpoint-down(md)
+						+pad(0)
+					a
+						padding: 0
+						height: 100%
+						color: color-get($mau,trang)
+						+media-breakpoint-down(md)
+							color: color-get($mau,main)
+						figure
+							height: 100%
+							+flex-center()
+							img
+								max-height: r(24px)
+								+media-breakpoint-down(md)
+									display: none
+							figcaption
+								padding-left: .5rem
+								h4
+									font-weight: 300
+									+fz(r(15px))
+									span
+										font-weight: 600
+										+fz(r(18px))
+										+media-breakpoint-down(md)
+											+fz(r(15px))
+						&:hover
+							text-decoration: none
+				ul
+					+flex-center()
+
+					li
+						+pad(0  r(8px))
+						height: 60%
+						a
+							transition: .3s all ease-in-out
+							opacity: .5
+							padding: 0
+							height: 100%
+							+flex-center()
+							color: color-get($mau,trang)
+							&.active
+								color: color-get($mau,main)
+						&:first-child
+							padding-left: 11px
+							border-left: 1px  solid color-rgba(color-get($mau,trang),.5)
+							
+						&:last-child
+							padding-right: 11px
+							border-right: 1px solid  color-rgba(color-get($mau,trang),.5)
+							
+						&:hover
+							a
+								opacity: 1
+
+				// .language
+				// 	+pad(0 1rem)
+				// 	a
+				// 		height: 100%
+				// 		+pad(0 )
+				// 		font-size: r(14px)
+				// 		+flex-center()
+				// 		color: color-get($mau,trang)
+				// 		span
+				// 			padding-right: .5rem
+				.language
+					transition: initial
+					+media-breakpoint-up(lg)
+						// margin-left: 1.5rem
+					.dropdown
+						+flex-center()
+						// box-shadow: inset 0 0 0 1px #ffffff
+						i, em
+							color: #ffffff
+							margin-right: .15rem
+						+media-breakpoint-up(lg)
+							height: 100%
+							// box-shadow: inset 0 0 0 1px #e1e1e1
+							i, em
+								color: color-get($mau,trang)
+						.dropdown-toggle
+							text-decoration: none
+							margin-left: .15rem
+							padding-left: 2rem
+							padding-right: 3px
+							padding-top: .2rem
+							padding-bottom: .25rem
+							color: #ffffff
+							font-size: .875rem
+							font-weight: 400
+							position: relative
+							transition: .3s ease-in-out
+							+media-breakpoint-down(md)
+								padding-top: .6rem
+							&:before
+								position: absolute
+								content: "\F59F"
+								font-family: 'Material Design Icons'
+								color: #ffffff
+								left: .7rem
+								font-size: 1.125rem
+								top: 50%
+								transform: translateY(-50%)
+							&:after
+								display: none
+							+media-breakpoint-up(lg)
+								color: color-get($mau,trang)
+								&:before
+									color: color-get($mau,trang)
+								&:hover
+									color: color-get($mau,trang)
+						.dropdown-menu
+							min-width: 5rem
+							.dropdown-item
+								font-size: .875rem
+								color: color-get($mau,main)
+								+media-breakpoint-up(lg)
+									font-size: 1rem
+								+media-breakpoint-down(md)
+									color: color-get($mau,trang)
+								&.active
+									background: color-get($mau, main)
+									color: #ffffff
+			.nav-bottom
+				transition: .5s all ease-in-out
+				position: relative
+				display: flex
+				align-items: center
+				justify-content: flex-end
+				+media-breakpoint-down(md)
+					height: 100vh
+					justify-content: initial
+					background: color-get($mau, light)
+					position: fixed
+					top: r(47px)
+					flex-direction: column
+					right: 0
+					width: r(300px)
+					transform: translateX(100%)
+					transition: .5s all ease-in-out
+					&.active
+						transition: .5s all ease-in-out
+						transform: translateX(0%)
+
+				+media-breakpoint-down(xs)
+					width: 80%
+				ul
+					justify-content: space-between
+					+media-breakpoint-down(md)
+						top: 4rem
+						flex-direction: column
+						right: 0
+						width: 100%
+						flex-wrap: nowrap
+					li
+						+media-breakpoint-down(md)
+							+pad(.7rem null)
+							&:first-child
+								padding-top: 1.4rem
+							&:last-child
+								padding-bottom: 1.4rem
+						a
+							+pad(1.2rem null)
+							text-transform: uppercase
+							color: color-get($mau,text-3)
+							position: relative
+							transition: .3s all ease-in-out
+							text-shadow: -.25px -.25px 0 transparent, .25px .25px transparent
+							&:after
+								transform: translateX(-50%)
+								transition: .3s all ease-in-out
+								content: ""
+								position: absolute
+								width: 0
+								height: 2px
+								background: color-get($mau, dark)
+								bottom: 0
+								left: 50%
+							+media-breakpoint-down(lg)
+								font-size: r(14px)
+							+media-breakpoint-down(md)
+								+pad(0  null)
+								font-weight: 400
+								color: color-get($mau,trang)
+							&:hover
+								+media-breakpoint-up(lg)
+									color: color-get($mau,dark)
+									text-shadow: -.25px -.25px 0 color-get($mau,dark), .25px .25px color-get($mau,dark)
+									&:after
+										width: 100%
+								+media-breakpoint-down(md)
+									color: color-get($mau, text-3)
+
+
+				.search
+					cursor: pointer
+					i
+						font-size: r(22px)
+						color: color-get($mau,dark)
+					+media-breakpoint-down(md)
+						display: none
+				.searchbox
+					// display: none
+					position: absolute
+					width: 200px
+					opacity: 0
+					top: -100%
+					display: flex
+					+media-breakpoint-up(lg)
+						right: 3rem
+						transition: .3s all ease-in-out
+					+media-breakpoint-down(md)
+						+pad(0 1rem)
+						opacity: 1
+						position: relative
+						width: 100%
+						margin-bottom: 1.4rem
+						top: initial
+					+media-breakpoint-down(sm)
+						width: 100%
+					input
+						border: 1px solid color-get($mau,main)
+						border-radius: 0.25rem 0 0 0.25rem
+						border-right: 0
+						padding: .5rem 1rem
+						&:hover, &:active, &:focus
+							outline: none
+						@media (max-width:992px)
+							width: 100%
+					.searchbutton
+						i
+							padding: 0 .5rem
+					&.active
+						opacity: 1
+						right: 0
+						top: 100%
+						display: flex
+
+					button
+						cursor: pointer
+						@media (max-width:992px)
+							display: flex
+						border: 1px solid color-get($mau,main)
+						background: color-get($mau, main)
+						border-radius:  0 0.25rem 0.25rem 0
+						+media-breakpoint-down(md)
+							background: color-get($mau, dark)
+							border: 1px solid color-get($mau,dark)
+						i
+							color: lighten(color-get($mau,main),30%)
+
+// menu responsive
+
+.sidemenu
+	// transition: .5s all ease-in-out
+	
+	+media-breakpoint-down(md)
+		z-index: 9997
+		transform: translateX(1000%)
+		height: 100vh
+		display: flex
+		flex-direction: column
+		background: color-get($mau, main)
+		position: fixed
+		top: r(47px)
+		width: r(60px)
+		transition: .5s all ease-in-out
+		margin-left: calc(100% - 300px - 60px)
+		&.active
+			transition: .5s all ease-in-out
+			transform: translateX(0%)
+			+media-breakpoint-down(sm)
+				margin-left: calc(100% - 300px - 60px)
+			+media-breakpoint-down(xs)
+				margin-left:  0
+			
+	+media-breakpoint-down(xs)
+		transform: translateX(-1000%)
+		width: 20%
+		margin-left: 0
+	.social
+		li
+			width: 100%
+			a
+				text-align: center
+		li
+			+media-breakpoint-down(md)
+			&:first-child
+				a
+					padding-top: 1.4rem
+			// &:last-child
+			// 	a
+			// 		padding-bottom: 1.4rem
+			a
+				+pad(.6rem null)
+				font-weight: 400
+				color: color-get($mau,trang)
+	.language
+		a
+			// color: color-get($mau,trang)
+			+flex-center()
+			flex-direction: column
+			// span
+			// 	display: none
+		.dropdown
+			padding-top: .6rem
+			transition: .3s all ease-in-out
+			.dropdown-toggle
+				transition: .3s all ease-in-out
+				color: color-get($mau,trang)
+				font-weight: 400
+				&:hover
+					text-decoration: none
+				&:after
+					border: 0
+			.dropdown-menu
+				// transform: translate3d(0px, 24px, 0px)
+				transition: .3s all ease-in-out
+				min-width: r(60px)
+				margin-top: .5rem
+				+media-breakpoint-down(xs)
+					min-width: 100%
+					transform: translate3d(0px, 34px, 0px) !important
+				&:after
+					display: block
+					position: absolute
+					content: ""
+					width: 0
+					height: 0
+					top: -.3rem
+					left: 50%
+					
+					transform: translateX(-50%)
+					border-right:  .3em solid transparent
+					border-left:  .3em solid transparent
+					border-bottom: .3em solid color-get($mau,trang)
+					
+				.dropdown-item
+					font-size: .875rem
+					+pad( null 0)
+					+media-breakpoint-down(md)
+						color: color-get($mau,main)
+					&.active
+						background: color-get($mau, main)
+						color: #ffffff
+
+
+.sidemenu-backdrop
+	position: fixed
+	background-color: #000000
+	opacity: .75
+	cursor: pointer
+	height: 100vh
+	width: 100vw
+	z-index: 9996
+	top: r(47px)
+	left: 200rem
+	transition: .3s ease-in-out
+	+media-breakpoint-down(xs)
+		width: 0
+	&.active
+		left: 0
+	+media-breakpoint-up(lg)
+		display: none
