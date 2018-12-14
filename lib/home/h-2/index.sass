@@ -1,0 +1,58 @@
+.canhcam-home-2
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5)
+
+	// overflow: hidden
+	margin-bottom: 10px
+	position: relative
+	.full-content
+		height: 100%
+		display: flex
+		align-items: flex-start
+		justify-content: center
+		flex-direction: column
+		+media-breakpoint-down(md)
+			align-items: flex-end
+			text-align: right
+			+pad(2rem null)
+		.head-title
+			text-align: left
+			+fz(r(30px))
+			text-transform: uppercase
+			color: color-get($mau,dark)
+			font-weight: 600
+			+media-breakpoint-down(sm)
+				+fz(1.5rem)
+		p
+			line-height: r(22px)
+			+pad(1.5rem null r(40px) null)
+			+fz(r(15px))
+			color: color-get($mau,text-3)
+			+media-breakpoint-down(sm)
+				+pad(1.5rem null 1.5rem null)
+			span
+				padding-bottom: .2rem
+				display: block
+				+fz(r(18px))
+				color: color-get($mau,text-6)
+		.btn-more
+			position: relative
+			font-weight: 300
+			text-transform: uppercase
+			width: r(180px)
+			height: r(40px)
+			+fz(r(15px))
+			+flex-center()
+			color: color-get($mau,text-9)
+			border: 2px solid color-get($mau,xam-e)
+			border-radius: r(20px)
+			overflow: hidden
+			background: color-get($mau, trang)
+			transition: .5s all ease-in-out
+			+media-breakpoint-down(sm)
+				width: 8.5rem
+
+			+media-breakpoint-up(md)
+				&:hover
+					background: transparent
+					box-shadow: 0px 0px 0px 50px color-get($mau,dark) inset
+					color: color-get($mau,trang)

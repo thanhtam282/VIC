@@ -216,9 +216,13 @@ main
 					&.active
 						transition: .5s all ease-in-out
 						transform: translateX(0%)
+						+media-breakpoint-down(xs)
+							transition-delay: .1s
 
 				+media-breakpoint-down(xs)
 					width: 80%
+					// transition-delay: .25s
+
 				ul
 					justify-content: space-between
 					+media-breakpoint-down(md)
@@ -431,6 +435,7 @@ main
 	top: r(47px)
 	left: 200rem
 	transition: .3s ease-in-out
+	transition-delay: .2s
 	+media-breakpoint-down(xs)
 		width: 0
 	&.active

@@ -1,0 +1,32 @@
+.canhcam-intro-2
+	+pad(r(94px) 0)
+	box-shadow: 0px 0px 49px 0px rgba(0,0,0,0.29)
+	margin-bottom: 10px
+	.feature
+		figure
+			+pad(1.75rem 0)
+			flex-direction: column
+			width: 100%
+			+flex-center()
+			img
+				filter: brightness(0) invert(1)
+			figcaption
+				+flex-center()
+				h2
+					text-transform: uppercase
+					font-size: r(20px)
+					color: color-get($mau,trang)
+					padding-top: 1.5rem
+					line-height: r(28px)
+		+ .feature
+			+media-breakpoint-up(lg)
+				figure
+					&:after
+						position: absolute
+						display: block
+						content: ""
+						height: 100%
+						width: 1px
+						background: color-get($mau, trang)
+						left: 0
+						top: 0

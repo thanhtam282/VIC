@@ -24,3 +24,15 @@ html, body
 	font-style: normal
 	font-weight: 300
 	+fz(1rem)
+
+.head-title
+	text-align: center
+	+fz(r(30px))
+	text-transform: uppercase
+	color: color-get($mau,dark)
+	font-weight: 600
+	+media-breakpoint-down(sm)
+		+fz(1.5rem)
+@media (min-width: 1500px)
+	.container
+		max-width: 1400px

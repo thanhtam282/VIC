@@ -6,6 +6,8 @@
 		"bower_components/offline/themes/offline-theme-default.css",
 		"bower_components/slick-carousel/slick/slick-theme.css",
 		"bower_components/slick-carousel/slick/slick.css",
+		"bower_components/owl.carousel/dist/assets/owl.carousel.min.css",
+		"bower_components/owl.carousel/dist/assets/owl.theme.default.css",
 		"bower_components/offline/themes/offline-language-english.css"
 	],
 	"scripts":[
@@ -16,6 +18,7 @@
 		"plugins/mapping-listener.js",
 		"bower_components/offline/offline.min.js",
 		"bower_components/slick-carousel/slick/slick.min.js",
+		"bower_components/owl.carousel/dist/owl.carousel.min.js",
 		"bower_components/sticky-footer/dist/js/sticky-footer.js"
 	]
 }
