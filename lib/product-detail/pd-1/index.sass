@@ -1,0 +1,89 @@
+.canhcam-product-detail-1
+	padding: r(75px) 0
+	+media-breakpoint-down(md)
+		padding: 2.5rem 0
+	.news-image
+		display: flex
+		justify-content: center
+		flex-direction: column
+		height: 100%
+		.list-items-main
+			padding-bottom: 3rem
+			+media-breakpoint-down(lg)
+				padding-bottom: 4rem
+			+media-breakpoint-down(md)
+				padding-bottom: 2rem
+			.slick-slide
+				img
+					width: 100%
+					+media-breakpoint-up(lg)
+						height: 20rem
+					+media-breakpoint-down(md)
+						object-fit: cover
+						height: r(250px)
+					+media-breakpoint-down(sm)
+						padding: 0 1rem 
+		.list-items-sub
+			.slick-list
+				+mar( 0 r(40px) )
+				+media-breakpoint-down(lg)
+					+mar( 0 r(20px) )
+				.slick-track
+					.slick-slide
+						margin: 0 5px
+						display: flex
+						justify-content: center
+						figure
+							position: relative
+							img
+								width: 100%
+								height: r(70px)
+								object-fit: cover
+							&:after
+								border: 1px solid #000
+								top: 0
+								content: ""
+								display: block
+								position: absolute
+								+wh(100%)
+								background: color-rgba(color-get($mau,den),.5)
+					.slick-current
+						figure
+							&:after
+								border: 1px solid color-get($mau,dark)
+								background: none
+			.slick-next
+				right: -6px
+				&:before
+					content: "arrow_forward_ios"
+					font-family: "Material Icons"
+					color: color-get($mau,text-3)
+			.slick-prev
+				left: 0
+				&:before
+					content: "arrow_back_ios"
+					font-family: "Material Icons"
+					color: color-get($mau,text-3)
+	.full-content
+		+media-breakpoint-down(md)
+			padding-top: 3rem
+		+media-breakpoint-down(sm)
+			+pad(null 1rem)
+		h2
+			padding-bottom: r(25px)
+			text-align: left
+			+media-breakpoint-down(lg)
+				font-size: 1.7rem
+			+media-breakpoint-down(md)
+				font-size: 1.5rem
+			+media-breakpoint-down(sm)
+				font-size: 1.2rem
+		.block
+			+pad(1rem null null null)
+			border-top: 1px solid #a0a0a0
+			p
+				+fz(r(15px))
+				line-height: r(23px)
+				padding-bottom: .9rem
+				
+				

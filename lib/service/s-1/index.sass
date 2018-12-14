@@ -1,0 +1,189 @@
+.canhcam-service-1
+	box-shadow: 0px 0px 49px 0px rgba(0,0,0,0.29)
+	margin-bottom: 10px
+	position: relative
+
+	.wrapper
+		display: flex
+		&:nth-child(odd)
+			+mar(10px null)
+			+media-breakpoint-up(md)
+				flex-direction: row-reverse
+				.banner-info-wrapper
+					.banner
+						left: 0
+						right: auto
+				.content
+					margin-left: 0
+					// margin-right: 10px
+					.banner
+						right: 0
+						left: auto
+					.spec-info
+						padding-left: 0
+						&:after
+							+media-breakpoint-up(md)
+								left:  calc((100vw - 720px)/-2 - 15px)
+							+media-breakpoint-up(lg)
+								left:  calc((100vw - 960px)/-2 - 15px)
+							+media-breakpoint-up(xl)
+								left:  calc((100vw - 1140px)/-2 - 15px)
+							@media (min-width: 1500px)
+								left:  calc((100vw - 1400px)/-2 - 15px)
+						&:before
+							right: -12rem
+							left: auto
+							background:  rgb(0,140,199)
+							+media-breakpoint-up(xl)
+								clip-path: circle(107% at -49% 50%)
+							+media-breakpoint-down(lg)
+								clip-path: circle(107% at -57% 50%)
+							+media-breakpoint-down(md)
+								clip-path: circle(114% at -60% 50%)
+
+
+		+media-breakpoint-down(sm)
+			flex-direction: column
+		.banner-info-wrapper
+			flex: 0 0 70%
+			display: flex
+			position: relative
+			+media-breakpoint-down(xl)
+				flex: 0 0 75%
+			+media-breakpoint-down(lg)
+				flex: 0 0 60%
+			+media-breakpoint-down(md)
+				flex: 0 0 50%
+			+media-breakpoint-down(sm)
+				flex: 0 0 100%
+				margin: 0
+				height: 16rem
+			.banner
+				z-index: -2
+				box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3)
+				position: absolute
+				top: 0
+				width: 100%
+				height: 100%
+				right: 0
+				+media-breakpoint-down(sm)
+					position: relative
+
+					width: 100vw
+					margin-left: calc(-50vw + 50%)
+					margin-right: calc(-50vw + 50%)
+				+media-breakpoint-up(md)
+					display: block
+					width: calc((100vw - 720px)/2 + 360px)
+				+media-breakpoint-up(lg)
+					width: calc((100vw - 960px)/2 + 573px)
+				+media-breakpoint-up(xl)
+					width: calc((100vw - 1140px)/2 + 847px)
+				@media (min-width: 1500px)
+					width: calc((100vw - 1400px)/ 2 + 972px)
+
+		
+		.content
+			// margin-left: 10px
+			flex: 0 0 30%
+			position: relative
+			+media-breakpoint-down(xl)
+				flex: 0 0 25%
+			+media-breakpoint-down(lg)
+				flex: 0 0 40%
+			+media-breakpoint-down(md)
+				flex: 0 0 50%
+			+media-breakpoint-down(sm)
+				margin-left: 0
+				margin-top: 10px
+			.spec-info
+				+flex-center()
+				text-align: left
+				align-items: flex-start
+				flex-direction: column
+				position: relative
+				+pad(r(140px) 1rem r(140px) 0)
+				+media-breakpoint-down(md)
+					+pad(r(60px) 1rem r(60px) 1.5rem)
+				+media-breakpoint-down(sm)
+					+pad(1.5rem .5rem)
+				&:before
+					display: block
+					position: absolute
+					z-index: -1
+					content: ""
+					top: 0
+					left: -12rem
+					+wh(100%)
+					background: rgb(27,86,152)
+					+media-breakpoint-down(xl)
+						-webkit-clip-path: circle(86% at 121% 50%)
+						clip-path: circle(86% at 121% 50%)
+					+media-breakpoint-down(lg)
+						-webkit-clip-path: circle(90% at 133% 50%)
+						clip-path: circle(90% at 133% 50%)
+					+media-breakpoint-down(md)
+						-webkit-clip-path: circle(98% at 141% 50%)
+						clip-path: circle(96% at 141% 50%)
+					+media-breakpoint-down(sm)
+						display: none
+					
+				&:after
+					height: 100%
+					// width: 45rem
+					top: 0
+					left: 0
+					content: ""
+					background-image: -moz-linear-gradient( 0deg, rgb(27,86,152) 0%, rgb(0,140,199) 100%)
+					background-image: -webkit-linear-gradient( 0deg, rgb(27,86,152) 0%, rgb(0,140,199) 100%)
+					background-image: -ms-linear-gradient( 0deg, rgb(27,86,152) 0%, rgb(0,140,199) 100%)
+					display: block
+					position: absolute
+					z-index: -1
+					+media-breakpoint-down(sm)
+						width: 100vw
+						margin-left: calc(-50vw + 50%)
+						margin-right: calc(-50vw + 50%)
+					+media-breakpoint-up(md)
+						width: calc((100vw - 720px)/2 + 360px)
+					+media-breakpoint-up(lg)
+						width: calc((100vw - 960px)/2 + 388px)
+					+media-breakpoint-up(xl)
+						width: calc((100vw - 1140px)/2 + 292px)
+					@media (min-width: 1500px)
+						width: calc((100vw - 1400px)/ 2 + 427px)
+
+				h4
+					color: color-get($mau,trang)
+				p
+					color: color-get($mau,trang)
+					+pad(r(25px) null)
+
+					+fz(r(15px))
+					line-height: r(22px)
+					span
+						display: block
+						+fz(r(18px))
+						+media-breakpoint-up(lg)
+							white-space: nowrap
+				.btn-more
+					position: relative
+					font-weight: 300
+					text-transform: uppercase
+					width: r(176px)
+					height: r(36px)
+					+fz(r(15px))
+					+flex-center()
+					color: color-get($mau,trang)
+					border: 2px solid color-get($mau,trang)
+					border-radius: r(20px)
+					overflow: hidden
+					transition: .5s all ease-in-out
+					background-image: -moz-linear-gradient( 0deg, rgb(27,86,152) 0%, rgb(0,140,199) 100%)
+					background-image: -webkit-linear-gradient( 0deg, rgb(27,86,152) 0%, rgb(0,140,199) 100%)
+					background-image: -ms-linear-gradient( 0deg, rgb(27,86,152) 0%, rgb(0,140,199) 100%)
+					+media-breakpoint-up(md)
+						&:hover
+							background: transparent
+							box-shadow: 0px 0px 0px 50px color-get($mau,dark) inset
+							color: color-get($mau,trang)

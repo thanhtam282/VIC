@@ -1,0 +1,34 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.pages
+	width: 100%
+	.pagination
+		margin-bottom: 4rem
+		justify-content: center
+		li
+			+ li
+				margin-left: 10px
+			a, span
+				text-decoration: none
+				color: #999999
+				+pad(.25rem .5rem)
+				+wh(r(30px))
+				border-radius: 50%
+				+fw(r(13px))
+				background: #e1e1e1
+				+flex-center
+			&.active
+				a, span
+					font-weight: 600
+					color: color-get($mau,trang)
+					background: color-get($mau, dark)
+					
+			a, span
+				color: #666
+				em
+					+fz(r(20px))
+
+					

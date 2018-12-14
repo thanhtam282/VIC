@@ -1,0 +1,15 @@
+section.canhcam-product-other-1
+	.container
+		.row
+			- for (var x = 0;  x < 6; x++)
+				.col-lg-4.col-md-6
+					.item
+						figure
+							img(src='./img/03_product/product_item_2.png', alt='')
+							figcaption
+								a(href="#").btn.btn-more xem thêm
+								h3 Tường cách nhiệt 
+									br
+									|  thương hiệu Alcopanel
+		.row
+			include ../../pagination/p-1/index.pug

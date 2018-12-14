@@ -125,6 +125,7 @@ function slider_bot() {
 
 	})
 };
+
 function slider_news_home() {
 	$('.canhcam-home-4 .owl-carousel').owlCarousel({
 		loop: true,
@@ -161,6 +162,46 @@ function slider_news_home() {
 
 ////// END OF HOME ////////
 
+//////  PRODUCT DETAIL ////////
+function slider_product_detail() {
+	$('.canhcam-product-detail-1 .list-items-main').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: false,
+		asNavFor: '.list-items-sub'
+	});
+	$('.canhcam-product-detail-1 .list-items-sub').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.list-items-main',
+		arrows: true,
+		dots: false,
+		centerMode: false,
+		focusOnSelect: true
+	});
+
+};
+
+
+function show_more_product_detail() {
+
+$('.canhcam-product-detail-3  .detail .btn-more ').each(function(){
+	$('.canhcam-product-detail-3  .detail .block-more').slideUp()
+	$(this).on('click', (function(){
+	$('.canhcam-product-detail-3 .detail').toggleClass('active');
+	// $('.canhcam-product-detail-3  .detail .btn-more ').hide()
+	$('.canhcam-product-detail-3  .detail .block-more').slideToggle()
+		$('.canhcam-product-detail-3 .detail .btn-more').text('XEM THÊM');
+	$('.canhcam-product-detail-3 .detail.active .btn-more').text('THU GỌN');
+}))
+})
+};
+
+////// END OF PRODUCT DETAIL ////////
+
+
+
 
 
 
@@ -177,14 +218,23 @@ $(document).ready(function () {
 	slider_banner();
 
 	/// END HEADER ///
-	
+
 	/// HOME ///
 	slider_bot();
 	slider_news_home();
 	slider_home()
 
 	/// END HOME ///
-	
+
+
+	/// PRODUCT ///
+	slider_product_detail();
+	/// END PRODUCT ///
+
+
+	/// PRODUCT DETAIL ///
+	show_more_product_detail();
+	/// END PRODUCT DETAIL ///
 });
 $(window).resize(function () {
 

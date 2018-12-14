@@ -18,10 +18,10 @@
 			em
 				color: color-get($mau,trang)
 				// +fz(r(20px))
-			+media-breakpoint-down(md)
+			&:hover
+				text-decoration: none
+			+media-breakpoint-up(md)
 				&:hover
-					text-decoration: none
-					// box-shadow: 0px 0px 0px 2px color-get($mau,trang) inset
 					background: color-get($mau,trang)
 					em
 						color: color-get($mau,den)

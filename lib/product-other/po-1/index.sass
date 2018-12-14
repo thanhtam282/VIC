@@ -1,0 +1,84 @@
+.canhcam-product-other-1
+	background: #f2f2f2
+
+	.item
+		figure
+			+pad(r(49px) r(80px) null r(80px)  )
+			margin-bottom: 1.75rem
+			+fz(r(20px))
+			line-height: r(33px)
+			+flex-center()
+			flex-direction: column
+			transition: .3s all ease-in-out
+			+media-breakpoint-down(sm)
+				margin-bottom: 0rem
+				&:first-child()
+					padding-top: r(25px)
+			figcaption
+				position: relative
+				+flex-center()
+				flex-direction: column
+				justify-content: flex-end
+				transition: .3s all ease-in-out
+				h3
+					font-weight: 400
+					white-space: nowrap
+					padding-top: r(70px)
+					padding-bottom: 1rem
+					+fz(r(20px))
+					text-transform: uppercase
+					transition: .3s all ease-in-out
+					+media-breakpoint-down(md)
+						padding-bottom: r(70px)
+						padding-top: 1rem
+						font-weight: 600
+					+media-breakpoint-down(sm)
+						+fz(1rem)
+				.btn-more
+					position: absolute
+					bottom: -50%
+					font-weight: 300
+					text-transform: uppercase
+					width: r(180px)
+					height: r(40px)
+					+fz(r(15px))
+					+flex-center()
+					color: color-get($mau,text-9)
+					border-radius: r(20px)
+					overflow: hidden
+					background: color-get($mau, trang)
+					opacity: 0
+					transition: .3s all ease-in-out
+					visibility: hidden
+					transition: visibility 0s, opacity .5s linear
+					+media-breakpoint-down(md)
+						width: 7.5rem
+						bottom: 0
+						margin-bottom: 1rem
+						opacity: 1
+						visibility: visible
+						background: color-get($mau,dark)
+						color: color-get($mau,trang)
+					+media-breakpoint-down(sm)
+						+fz(r(14px))
+						height: 2rem
+			+media-breakpoint-up(lg)
+				&:hover
+					box-shadow: 0px 6px 25.65px 1.35px rgba(0, 0, 0, 0.21)
+					figcaption
+						flex-direction: column-reverse
+
+						h3
+							padding-bottom: r(70px)
+							padding-top: 1rem
+
+							font-weight: 600
+						.btn-more
+							bottom: 0
+							margin-bottom: 1rem
+							opacity: 1
+							visibility: visible
+							background: color-get($mau,dark)
+							color: color-get($mau,trang)
+							&:hover
+								box-shadow: 0px 0px 0px 50px color-get($mau,main) inset
