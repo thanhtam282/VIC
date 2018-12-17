@@ -1,0 +1,140 @@
+
+.canhcam-contact-1
+	+pad(r(80px) null)
+	margin-bottom: 10px
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.29)
+
+	.head-title
+		color: color-get($mau,trang)
+	p
+		text-align: center
+		+fz(15px)
+		+pad(1rem null)
+		color: color-get($mau,trang)
+	.wrap-form
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		margin: 0 auto
+		flex-direction: column
+		#ctl00_mdl234_ctl00_pnlQuestions
+			flex-direction: column
+			display: flex
+		.form-group
+			margin-bottom: r(23px)
+		input, textarea
+			padding: r(18px) r(20px)
+			color: color-rgba(color-get($mau,text-3),.5)
+			background: color-get($mau,trang)
+			+pad(1rem null)
+			border: 0
+			+fz(r(15px))
+			width: 100%
+			border-radius:  3px
+		::-webkit-input-placeholder
+			color: color-rgba(color-get($mau,text-3),.5)
+
+		.qtext
+			flex: 0 0 100%
+			+flex-center()
+		.qparagraph
+			flex: 0 0 100%
+			+flex-center()
+
+
+		#ctl00_mainContent_ctl04_captcha_SpamProtectorPanel
+			#ctl00_mainContent_ctl04_captcha_ctl01
+				a
+					font-size: 0
+					text-decoration: none
+					&:after
+						content: "\e861"
+						font-family: "Linearicons-Free"
+						font-size: 2rem
+						display: block
+						margin: 0 1rem
+						color: color-get($mau,trang)
+					&:hover
+						&:after
+							color: color-get($mau,trang)
+							text-decoration: none
+		.frm-btnwrap
+			.frm-btn
+
+				.btn
+
+		.frm-btnwrap
+			display: inline-flex
+			+mar(0 null 0 r(20px))
+			+media-breakpoint-down(sm)
+				width: 100%
+				margin: 0
+			.label
+				display: none
+			input
+				border-radius: 0
+				height: 40px
+			.frm-btn
+				width: 100%
+				.frm-btn-submit
+					border: 0
+					text-transform: uppercase
+					border-radius: r(25px)
+					background-image: -moz-linear-gradient( 0deg, rgb(27,86,152) 0%, rgb(0,140,199) 100%)
+					background-image: -webkit-linear-gradient( 0deg, rgb(27,86,152) 0%, rgb(0,140,199) 100%)
+					background-image: -ms-linear-gradient( 0deg, rgb(27,86,152) 0%, rgb(0,140,199) 100%)
+					color: color-get($mau,trang)
+					height: r(50px)
+					+flex-center()
+					+media-breakpoint-down(xl)
+						width:  r(153px)
+					+media-breakpoint-down(lg)
+						width: 6rem
+					+media-breakpoint-down(md)
+						width: 5.5rem
+					+media-breakpoint-down(sm)
+						font-size: 1rem
+						width: 100%
+					@media (min-width: 1500px)
+						width: r(190px)
+				.frm-btn-reset
+					display: none
+
+
+		.frm-captcha
+			height: r(50px)
+			float: left
+			+flex-center()
+			justify-content: space-between
+			flex-direction: row-reverse
+			width: 67%
+			+media-breakpoint-down(lg)
+				width: 72%
+			+media-breakpoint-down(md)
+				width: 81%
+			+media-breakpoint-down(sm)
+				width: 100%
+			.frm-captcha-input
+				+wh(100%)
+				+flex-center()
+				.label
+					display: none
+				input
+					height: 100%
+					width: 100%
+					border: 0
+					color: color-get($mau,text-6)
+					background: #ebebeb
+					+pad(0 1rem )
+					border-radius:  0.25rem
+
+	#ctl00_mainContent_ctl04_captcha_ctl01
+		+flex-center()
+		justify-content: space-evenly
+		width: 100%
+		img
+			width: 10rem
+			height: 100%
+			+media-breakpoint-down(sm)
+				width: 6rem !important
+				height: r(50px)

@@ -1,0 +1,34 @@
+section.canhcam-contact-1(bg-img='./img/04_service_detail/service_detail_bg_form.png')
+	.container
+		.row
+			.col
+				h2.head-title đăng ký tư vấn
+				p Điền vào form bên dưới để được Liên Việt VIC hỗ trợ tư vấn
+		.row
+			.col-10.mx-auto
+				.wrap-form
+					#ctl00_mdl234_ctl00_pnlQuestions
+						.row
+							.col-lg-5.item
+								.form-group.qtext
+									input( type="text" placeholder="Họ và tên")
+								.form-group.qtext
+									input( type="text" placeholder="Email")
+								.form-group.qtext
+									input( type="text" placeholder="Số điện thoại")
+								.form-group.qtext
+									input( type="text" placeholder="Tiêu đề")
+							.col-lg-7.item
+								.form-group.qparagraph 
+									textarea(name="Nội dung",placeholder="Nội dung",  rows="8")
+								.form-group.frm-captcha
+									.frm-captcha-input
+										input( type="text" placeholder="")
+									#ctl00_mainContent_ctl04_captcha_SpamProtectorPanel
+										#ctl00_mainContent_ctl04_captcha_ctl01
+											img(src='./img/04_service_detail/service_detail_2.png', alt='')
+											a(href="#")
+
+								.form-group.frm-btnwrap
+									.frm-btn
+										a(href="#").btn.frm-btn-submit Gửi

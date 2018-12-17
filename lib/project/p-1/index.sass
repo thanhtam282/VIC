@@ -1,0 +1,112 @@
+.canhcam-project-1
+	+pad(r(80px) null )
+	.head-title
+		padding-bottom: r(45px)
+	.wrapper-img
+		display: flex
+		flex-wrap: wrap
+	.item
+		flex: 0 0 33.333%
+		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.29)
+		&:nth-child(3n)
+			figure
+				margin-right: 0
+		figure
+			margin-bottom: 10px
+			margin-right: 10px
+			position: relative
+			height: r(550px)
+			img
+				height: 100%
+				width: 100%
+				object-fit: cover
+			&:after
+				position: absolute
+				display: block
+				+wh(100%)
+				content: ""
+				background-image: linear-gradient(transparent 43%,#000 104%)
+				bottom: -1px
+
+
+			figcaption
+				z-index: 1000
+				bottom: 0
+				position: absolute
+				text-align: center
+				+wh(100%)
+				+flex-center()
+				flex-direction: column
+				justify-content: flex-end
+				// +pad(null r(95px))
+				// +media-breakpoint-down(lg)
+				// 	+pad(null 4rem)
+				// +media-breakpoint-down(md)
+				// 	+pad(null r(55px))
+				// +media-breakpoint-down(sm)
+				// 	+pad(null r(45px))
+				h4
+					color: color-get($mau,trang)
+					+fz(20px)
+					line-height: r(30px)
+					text-transform: uppercase
+					transition: .3s all ease-in-out
+					+media-breakpoint-down(lg)
+						+fz(1rem)
+						line-height: r(22px)
+					+media-breakpoint-down(md)
+						+fz(r(14px))
+						line-height: r(20px)
+				p
+					transition: .3s all ease-in-out
+					color: color-get($mau,trang)
+					display: none
+					+fz(r(15px))
+					line-height: r(22px)
+				.btn-more
+					position: relative
+					font-weight: 300
+					text-transform: uppercase
+					width: r(180px)
+					height: r(40px)
+					+fz(r(15px))
+					+flex-center()
+					color: color-get($mau,text-9)
+					border: 2px solid color-get($mau,xam-e)
+					border-radius: r(20px)
+					overflow: hidden
+					background: color-get($mau, trang)
+					transition: .3s all ease-in-out
+					opacity: 0
+					+media-breakpoint-down(md)
+						width: 7.5rem
+			+media-breakpoint-up(md)
+				&:hover
+					figcaption
+						h4
+							padding-bottom: .5rem
+						p
+							padding-bottom: 1rem
+							display: block
+						.btn-more
+							margin-bottom: 2rem
+							opacity: 1
+							background: transparent
+							color: color-get($mau,trang)
+							&:hover
+								box-shadow: 0px 0px 0px 50px color-get($mau,dark) inset
+			+media-breakpoint-down(md)
+				figcaption
+					h4
+						padding-bottom: .5rem
+					p
+						padding-bottom: 1rem
+						opacity: 1
+						z-index: 0
+					.btn-more
+						font-size: r(14px)
+						margin-bottom: 2rem
+						height: 2rem
+						opacity: 1
+						background: color-get($mau, dark)
+						color: color-get($mau,trang)

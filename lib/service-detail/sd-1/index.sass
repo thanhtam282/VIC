@@ -1,0 +1,79 @@
+.canhcam-service-detail-1
+	box-shadow: 0px 0px 49px 0px rgba(0,0,0,0.29)
+	margin-bottom: 10px
+	position: relative
+	+pad(r(78px) null r(54px) null)
+	.main-news
+		h1
+			text-align: left
+			padding-bottom: r(20px)
+		img
+			+pad(1rem null 0 null)
+			width: 100%
+			+media-breakpoint-up(lg)
+				+pad(null 100px)
+		p
+			+fz(r(15px))
+			line-height: r(23px)
+		strong
+			display: block
+			+pad(1.5rem null .9rem null)
+	.other-news
+		position: sticky
+		z-index: 500
+		top: r(105px)
+		+media-breakpoint-down(md)
+			padding-top: 2rem
+
+		h2
+			text-align: left
+			color: color-get($mau,text-3)
+			padding-bottom: r(20px)
+		figure
+			margin-bottom: 1rem
+			position: relative
+			+media-breakpoint-down(md)
+				display: flex
+			+media-breakpoint-down(sm)
+				flex-direction: column
+			img
+				width: 100%
+				+media-breakpoint-down(md)
+					flex: 0 0 50%
+				+media-breakpoint-down(sm)
+					flex: 0 0 100%
+			&:after
+				position: absolute
+				display: block
+				+wh(100%)
+				content: ""
+				background-image: linear-gradient(transparent 43%,#000 104%)
+				bottom: -1px
+				+media-breakpoint-down(md)
+					display: none
+			figcaption
+				width: 100%
+				display: flex
+				justify-content: center
+
+				+pos(abs, null null 0 null)
+				+media-breakpoint-down(md)
+					position: relative
+					padding-left: 1rem
+				+media-breakpoint-down(sm)
+					padding-left: 0
+				h3
+					z-index: 1000
+					+fz(15px)
+					text-transform: uppercase
+					color: color-get($mau,trang)
+					padding-bottom: 1rem
+					+media-breakpoint-down(md)
+						color: color-get($mau,text-3)
+						text-align: left
+						width: 100%
+						font-weight: 600
+						font-size: 1.2rem
+					+media-breakpoint-down(sm)
+						padding-top: 1rem
+						padding-bottom: 2rem
