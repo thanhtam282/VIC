@@ -1,0 +1,176 @@
+
+.othernews
+	// // +bor-rad(5px)
+	// overflow: hidden
+	// width: 100%
+	h2
+		text-align: left
+
+	.lists
+		+pad(2rem 0 1rem 0)
+		+media-breakpoint-down(sm)
+			+pad(1rem 0)
+		.item
+			figure
+				+pad(.5rem null)
+				border-bottom: 1px solid #e6e6e6
+				display: flex
+				+media-breakpoint-down(sm)
+					border: 0
+					// flex-direction: column
+				.img
+					flex: 0 0 50%
+					overflow: hidden
+					height: r(120px)
+					+media-breakpoint-down(md)
+						height: 10rem
+					+media-breakpoint-down(sm)
+						height: auto
+						// flex: 0 0 100%
+					img
+						object-fit: cover
+						+wh(100%)
+						transition: .3s all ease-in-out
+				figcaption
+					position: relative
+					padding-left: .5rem
+					h3
+						+fz(1rem)
+						font-weight: 600
+						color: color-get($mau,main)
+						transition: .3s all ease-in-out
+						+line(3)
+						+media-breakpoint-down(sm)
+							+fz(r(14px))
+					time
+						+fw(300)
+						color: darken(color-get($mau,trang) ,30%)
+						+fz(r(15px))
+						em
+							font-style: normal
+							position: absolute
+							bottom: 0
+							+media-breakpoint-up(md)
+								bottom: 1.5rem
+							&:before
+								margin: 3px
+			&:hover
+				text-decoration: none
+				+media-breakpoint-up(md)
+					figure
+						.img
+							img
+								transform: scale(1.1)
+						figcaption
+							h3
+								color: color-get($mau,dark)
+			&:last-child()
+				figure
+					border: 0
+
+	// 		display: flex
+	// 		text-decoration: none
+	// 		height: 100%
+	// 		overflow: hidden
+	// 		&:last-child
+	// 			figure
+	// 				margin-bottom: 1rem
+	// 		&:first-child
+	// 			figure
+	// 				margin-top: 1rem
+	// 		figure
+	// 			width: 100%
+	// 			position: relative
+	// 			overflow: hidden
+	// 			// +bor-rad(5px)
+	// 			margin-bottom: 2rem
+	// 			background: transparent
+	// 			+media-breakpoint-down(md)
+	// 				display: flex
+	// 			+media-breakpoint-down(sm)
+	// 				display: block
+	// 			.img
+	// 				+media-breakpoint-up(lg)
+	// 					overflow: hidden
+	// 				img
+	// 					transition: .5s all ease-in-out
+	// 					+media-breakpoint-down(md)
+	// 						max-width: r(320px)
+	// 					+media-breakpoint-down(sm)
+	// 						max-width: none
+	// 						width: 100%
+
+	// 					// +bor-rad(5px 5px 0 0)
+				// figcaption
+				// 	+media-breakpoint-down(md)
+				// 		padding: 1rem
+				// 	+media-breakpoint-down(sm)
+				// 		padding: 1rem
+				// 		padding-left: 0
+
+				// 	h3
+				// 		+fw(600)
+				// 		overflow: hidden
+				// 		text-overflow: ellipsis
+				// 		display: -webkit-box
+				// 		line-height: r(21px)
+				// 		-webkit-line-clamp: 3
+				// 		-webkit-box-orient: vertical
+				// 		color: color-get($mau,main)
+				// 		+fz(1rem)
+				// 	time
+				// 		+fz(.9rem)
+				// 		+fw(200)
+				// 		color: darken(color-get($mau,trang) ,30%)
+				// 		em
+				// 			font-style: normal
+				// 			&:before
+				// 				margin: 3px
+
+	// +media-breakpoint-up(lg)
+	// 	background: transparent
+	// 	h2
+		
+	// 		+pad(1rem)
+	// 		padding-bottom: 0
+	// 		position: relative
+	// 	.lists
+	// 		+pad(1rem)
+	// 		.item
+	// 			border-bottom: 1px solid darken(color-get($mau,trang) ,10%)
+	// 			margin-bottom: 1rem
+	// 			&:last-child
+	// 				border-bottom: 0
+	// 				margin-bottom: 0
+
+	// 			figure
+	// 				background: none
+	// 				display: flex
+	// 				align-items: flex-start
+	// 				width: 100%
+	// 				min-height: 120px
+	// 				margin-bottom: 1rem
+	// 				position: relative
+	// 				.img
+	// 					img
+	// 						transition: .5s all ease-in-out
+	// 						display: block
+	// 						height: 100%
+	// 						+pos(abs, 0 null null 0)
+	// 						width: 50%
+	// 						max-width: 50%
+	// 				// img
+	// 					// display: none
+	// 				figcaption
+	// 					+pad(0 0 0 calc(50% + .5rem))
+	// 					height: 100%
+	// 					time
+	// 						position: absolute
+	// 						bottom: 1.5rem
+
+	// 			&:hover
+	// 				figure
+	// 					background: none
+	// 					.img
+	// 						img
+	// 							transform: scale(1.1)

@@ -64,13 +64,27 @@ main
 					+media-breakpoint-down(md)
 						+wh(0)
 
-				.btn-primary
+				.btn-open-menu
 					cursor: pointer
 					display: none
 					+media-breakpoint-down(md)
 						display: block
 						margin-left: 1rem
 						+flex-center()
+						em
+							font-size: r(31px)
+							color: color-get($mau,dark)
+							&:last-child()
+								transition-delay: .2s
+								display: none
+								transition: .5s all ease-in-out
+						&.active
+							em
+								&:first-child()
+									display: none
+								&:last-child()
+									display: block
+									transform: rotate(135deg)
 
 				.hotline
 					+pad(6px r(80px))

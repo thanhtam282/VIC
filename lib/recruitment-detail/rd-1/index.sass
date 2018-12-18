@@ -1,0 +1,73 @@
+.canhcam-recruitment-detail-1
+	// position: relative
+	// background: color-rgba(color-get($mau,den),.5)
+	// margin-top: r(-48px)
+	+pad(r(80px) 0)
+	+media-breakpoint-down(md)
+		+pad(r(40px) 0)
+	.main-job
+		h2
+			+head-title()
+			text-align: left
+			padding-bottom: r(40px)
+	.block-req
+		p
+			text-transform: uppercase
+			padding-bottom: r(23px)
+			color: color-get($mau,text-3)
+			font-weight: 500
+			+fz(r(18px))
+		ul
+			padding-left: 1rem
+			li
+				font-size: r(15px)
+				color: color-get($mau,text-3)
+				padding-bottom: r(23px)
+	.note
+		p
+			+fz(r(15px))
+			color: color-get($mau,text-3)
+			span
+				color: color-get($mau,main)
+				font-weight: 500
+	.btn-submit
+		text-transform: uppercase
+		background: color-get($mau, trang)
+		width: r(180px)
+		height: r(40px)
+		+flex-center()
+		color: color-get($mau,trang)
+		transition: .3s all ease-in-out
+		margin-top: 2rem
+		border-radius: 0
+		font-size: r(15px)
+		box-shadow: 0px 0px 0px 25px color-get($mau,dark) inset
+		+media-breakpoint-up(md)
+			&:hover
+				box-shadow: 0px 0px 0px 0px color-get($mau,dark) inset
+				color: color-get($mau,dark)
+				border: 1px solid color-get($mau,dark)
+	.other-job
+		+pad(1.5rem)
+		padding-bottom: 0
+		border-top: 2px solid color-get($mau,dark)
+		box-shadow: 0px 0px 4.74px 1.26px rgba(0, 0, 0, 0.2)
+		+media-breakpoint-down(md)
+			margin-top: 3rem
+		h2
+			+head-title()
+			text-align: left
+			padding-bottom: 1rem
+		p
+			padding-top: 1rem
+			border-top: 1px dashed color-get($mau,text-6)
+			color: color-get($mau,text-3)
+			+fz(r(15px))
+			line-height: r(26px)
+		time
+			+fz(r(15px))
+			padding-bottom: 1rem
+			display: block
+			span
+				margin-left: 2rem
+			// display: block

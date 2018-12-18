@@ -1,0 +1,34 @@
+.canhcam-news-list-1
+	background: #f2f2f2
+	padding-top: r(80px)
+	padding-bottom: r(40px)
+	+media-breakpoint-down(md)
+		padding-bottom: r(40px)
+		padding-bottom: r(20px)
+	.head-title
+		padding-bottom: r(35px)
+	ul
+		justify-content: center
+		align-items: center
+		li
+			+mar(0 5px)
+			a
+				text-transform: uppercase
+				+pad(r(12px) r(40px))
+				+fz(r(15px))
+				border: 2px solid #e1e1e1
+				color: color-rgba(color-get($mau,text-3),.5)
+				border-radius: r(25px)
+				transition: .3s all ease-in-out
+				&:hover
+					background: color-get($mau, dark)
+					color: color-get($mau,trang)
+					border: 2px solid color-get($mau,dark)
+			&.active
+				a
+					+pad(r(14px) r(40px))
+					background: color-get($mau, dark)
+					color: color-get($mau,trang)
+					font-weight: 600
+					border: 0
+			

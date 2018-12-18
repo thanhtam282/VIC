@@ -1,0 +1,73 @@
+.canhcam-support-cus-1
+	background: #f2f2f2
+	+pad(r(75px) null)
+	+media-breakpoint-down(md)
+		+pad(r(45px) null)
+	position: relative
+	.head-title
+		padding-bottom: r(40px)
+	.canhcam-kl-1
+		margin-bottom: 2rem
+
+		.content
+			+ .content
+				margin-top: 2rem
+			
+			.item
+				+ .item
+					margin-top: 10px
+				margin-bottom: 0rem
+				box-shadow: none
+				&:last-child
+					margin-bottom: 0!important
+				.name
+					position: relative
+					cursor: pointer
+					background: color-get($mau, trang)
+					+pad(1rem r(20px))
+					display: flex
+					h2
+						font-weight: 500
+						+fz(r(15px))
+						position: relative
+						width: 100%
+						&:after
+							content: 'arrow_drop_down'
+							font-family: 'Material Icons'
+							color: color-get($mau,text-3)
+							+pos(abs, 50% 0 null null)
+							transform: translateY(-50%)
+							+fz(r(20px))
+				&.active
+					box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.35)
+					.name
+
+						border-bottom: 1px  solid color-get($mau,text-e)
+						h2
+							&:after
+								content: 'arrow_drop_up'
+								transition: .3s all ease-in-out
+
+				.introduce
+					background: color-get($mau, trang)
+					+pad(r(25px) r(27px))
+
+					p
+						font-size: r(15px)
+						color: color-get($mau,text-6)
+						+ p
+							padding-top: 1rem
+
+	+media-breakpoint-up(lg)
+		.canhcam-kl-1
+			.content
+				.item
+					.introduce
+						figure
+							display: flex
+							margin-bottom: 0
+							.img
+								flex: 0 0 5%
+							figcaption
+								margin-left: 1rem
+								margin-top: 0

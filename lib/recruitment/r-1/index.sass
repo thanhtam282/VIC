@@ -1,0 +1,58 @@
+.canhcam-recruitment-1
+	// position: relative
+	// background: color-rgba(color-get($mau,den),.5)
+	// margin-top: r(-48px)
+	background: #f2f2f2
+
+	+pad(r(80px) null)
+	+media-breakpoint-down(md)
+		+pad(3.5rem null)
+	.wrapper
+		figure
+			display: flex
+			flex-wrap: wrap
+			.img
+				flex: 0 0 50%
+				// +pad(null r(15px))
+				// margin-right: r(15px)
+				+media-breakpoint-down(md)
+					flex: 0 0 100%
+				position: relative
+				box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.35)
+				height: r(390px)
+				+media-breakpoint-down(sm)
+					height: auto
+					&:before
+						display: none
+				&:before
+					z-index: -1
+					content: ""
+					position: absolute
+					bottom: -1rem
+					right: -1rem
+					+wh(100%)
+					background: color-get($mau, dark)
+
+				img
+					// padding-right: r(15px)
+					+wh(100%)
+					object-fit: cover
+
+					
+			figcaption
+				flex: 0 0 50%
+				+media-breakpoint-down(md)
+					flex: 0 0 100%
+				+pad(null r(15px))
+				.fullcontent
+					padding-left: r(60px)
+					+media-breakpoint-down(md)
+						padding-top: 3.5rem
+						+pad(null 0)
+					h2
+						+head-title()
+						text-align: left
+						padding-bottom: r(35px)
+						+media-breakpoint-down(sm)
+							padding-bottom: 1.5rem
+					

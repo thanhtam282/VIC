@@ -1,17 +1,38 @@
 .canhcam-project-1
 	+pad(r(80px) null )
+	+media-breakpoint-down(sm)
+		+pad(r(40px) null )
 	.head-title
 		padding-bottom: r(45px)
+		+media-breakpoint-down(sm)
+			padding-bottom: r(20px)
 	.wrapper-img
 		display: flex
 		flex-wrap: wrap
 	.item
 		flex: 0 0 33.333%
-		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.29)
-		&:nth-child(3n)
+		+media-breakpoint-down(md)
+			flex: 0 0 50%
+		+media-breakpoint-down(sm)
+			flex: 0 0 100%
 			figure
-				margin-right: 0
+				margin-bottom: 10px !important
+				margin-right: 10px !important
+				margin-left: 10px !important
+		+media-breakpoint-down(md)
+			figure
+				+mar(0 10px 10px 0)
+			&:nth-child(2n)
+				figure
+					margin-right: 0
+		+media-breakpoint-up(lg)
+			figure
+				+mar(0 10px 10px 0)
+			&:nth-child(3n)
+				figure
+					margin-right: 0
 		figure
+			box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.29)
 			margin-bottom: 10px
 			margin-right: 10px
 			position: relative
@@ -25,7 +46,7 @@
 				display: block
 				+wh(100%)
 				content: ""
-				background-image: linear-gradient(transparent 43%,#000 104%)
+				background-image: linear-gradient(transparent 27%,#000 104%)
 				bottom: -1px
 
 
@@ -38,13 +59,13 @@
 				+flex-center()
 				flex-direction: column
 				justify-content: flex-end
-				// +pad(null r(95px))
-				// +media-breakpoint-down(lg)
-				// 	+pad(null 4rem)
-				// +media-breakpoint-down(md)
-				// 	+pad(null r(55px))
-				// +media-breakpoint-down(sm)
-				// 	+pad(null r(45px))
+				+pad(null r(95px))
+				+media-breakpoint-down(lg)
+					+pad(null 4rem)
+				+media-breakpoint-down(md)
+					+pad(null r(55px))
+				+media-breakpoint-down(sm)
+					+pad(null r(45px))
 				h4
 					color: color-get($mau,trang)
 					+fz(20px)
@@ -86,9 +107,9 @@
 						h4
 							padding-bottom: .5rem
 						p
-							padding-bottom: 1rem
 							display: block
 						.btn-more
+							margin-top: 1.5rem
 							margin-bottom: 2rem
 							opacity: 1
 							background: transparent
@@ -100,13 +121,16 @@
 					h4
 						padding-bottom: .5rem
 					p
-						padding-bottom: 1rem
-						opacity: 1
-						z-index: 0
+						display: block
 					.btn-more
+						margin-top: 1.5rem
 						font-size: r(14px)
 						margin-bottom: 2rem
 						height: 2rem
 						opacity: 1
 						background: color-get($mau, dark)
 						color: color-get($mau,trang)
+			+media-breakpoint-down(sm)
+				figcaption
+					p
+						font-size: r(13px)

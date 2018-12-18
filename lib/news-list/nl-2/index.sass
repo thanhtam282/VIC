@@ -1,0 +1,87 @@
+.canhcam-news-list-2
+	background: #f2f2f2
+	// +pad(r(80px) 0)
+	padding-bottom: r(80px)
+	+media-breakpoint-down(md)
+		padding-bottom: r(40px)
+	.head-title
+		padding-bottom: r(30px)
+	.item
+		margin-bottom: r(30px)
+		figure
+			a
+				.box-zoom
+					overflow: hidden
+					height: r(180px)
+					img
+						object-fit: cover
+						+wh(100%)
+						
+						transition: .3s all ease-in-out
+						width: 100%
+				+media-breakpoint-up(md)
+					&:hover
+						.box-zoom
+							img
+								transform: scale(1.1)
+						figcaption
+							h4
+								color: color-get($mau,dark)
+							p
+								color: lighten(#333333, 20%)
+			figcaption
+				background: color-get($mau, trang)
+				+pad(r(20px)  r(20px) 1rem  r(20px))
+				h4
+					color: color-get($mau,main)
+					+fz(1rem)
+					line-height: r(24px)
+					text-transform: uppercase
+					+media-breakpoint-down(lg)
+						+fz(1rem)
+						line-height: r(22px)
+					+media-breakpoint-down(md)
+						+fz(r(14px))
+						line-height: r(20px)
+				p
+					+pad(r(20px) null null null)
+					margin-bottom: r(12px)
+					+fz(r(14px))
+					line-height: r(20px)
+					color: color-get($mau,text-3)
+					+line(3)
+					height: r(80px)
+
+			.show-more
+				display: flex
+				justify-content: space-between
+				position: relative
+				time
+					padding-top: .5rem
+					border-top: 1px solid
+					+fz(r(15px))
+					color: color-get($mau,text-9)
+					// position: absolute
+					// left: 0
+					// padding-left: r(20px)
+					display: block
+					padding-right: r(20px)
+					bottom: .5rem
+					width: 100%
+					em
+						padding-right: .25rem
+				a
+					+pos(abs, null 0 null null)
+					height: 100%
+					em
+						transition: .3s all ease-in-out
+						height: 100%
+						+flex-center()
+						color: color-get($mau,text-9)
+					+media-breakpoint-up(md)
+						&:hover
+							text-decoration: none
+							em
+								color: color-get($mau,main)
+
+							

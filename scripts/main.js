@@ -12,15 +12,17 @@ function setHeightH3() {
 
 
 $(function () {
-	$('.btn-primary').on('click', function () {
+	$('.canhcam-header-1 .btn-open-menu').on('click', function () {
+		$('.canhcam-header-1 .btn-open-menu').toggleClass('active')
 		$('.sidemenu').toggleClass('active')
-		$('.nav-bottom').toggleClass('active')
-		$('.sidemenu-backdrop').toggleClass('active')
+		$('.canhcam-header-1 .nav-bottom').toggleClass('active')
+		$(' .sidemenu-backdrop').toggleClass('active')
 	})
-	$('.sidemenu-backdrop').on('click', function () {
+	$(' .sidemenu-backdrop').on('click', function () {
+		$('.canhcam-header-1 .btn-open-menu').toggleClass('active')
 		$('.sidemenu').toggleClass('active')
-		$('.nav-bottom').toggleClass('active')
-		$('.sidemenu-backdrop').toggleClass('active')
+		$('.canhcam-header-1 .nav-bottom').toggleClass('active')
+		$(' .sidemenu-backdrop').toggleClass('active')
 	})
 })
 
@@ -201,13 +203,70 @@ $('.canhcam-product-detail-3  .detail .btn-more ').each(function(){
 ////// END OF PRODUCT DETAIL ////////
 
 
+////// SUPPORT CUSTOMER ////////
+function show_more_supprt_cus() {
+	$('.canhcam-support-cus-1 .canhcam-kl-1 .item .name').each(function(){
+		$(this).parents('.item').find('.introduce').slideUp();
+		$(this).on('click', (function(){
+			if ($(this).parents('.item').find('.introduce').length){
+				$(this).parents('.item').toggleClass('active')
+			}
+			$(this).parents('.item').find('.introduce').slideToggle();
+			
+			
+			$(this).parents('.item').siblings().find('.introduce').slideUp();
+			$(this).parents('.item').siblings().removeClass('active');
+		}))
+	})
+
+}
 
 
+////// END OF SUPPORT CUSTOMER ////////
+
+
+////// NEWS DETAIL ////////
+function createNewsSocial1() {
+	var newsFullPath = document.URL
+	var newsFullPathEncode = encodeURIComponent(document.URL)
+	$('.fb-share-button').attr('data-href', newsFullPath)
+	$('.fb-share-button .fb-xfbml-parse-ignore').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + newsFullPathEncode + '&src=sdkpreparse')
+	$('.twitter-share-button').attr('data-url', newsFullPath)
+}
+
+
+////// END OF NEWS DETAIL ////////
+
+function news_photo() {
+
+$(".canhcam-news-photo-1  .box-zoom").lightGallery({
+	thumbnail: true,
+	selector: 'a'
+});
+
+// $('.canhcam-news-photo-1 .wrapper-gallery').each(function() {
+// 	$(this).click(function() {
+// 		$(this).find('.hidden a:first-child').trigger('click')
+// 	})
+// });
+}
 
 
 
 ///////// MAIN Control /////
 $(document).ready(function () {
+	// $('.canhcam-news-photo-1  .box-zoom a').fancybox({
+	// 	width: 640,
+	// 	height: 400,
+	// 	type: 'iframe'
+	// });
+
+
+
+// 	$(".canhcam-news-photo-1  .box-zoom").lightGallery({
+// 	thumbnail: true,
+// 	selector: 'a'
+// });
 	/// GLOBAL ///
 
 	/// END GLOBAL ///
@@ -235,9 +294,18 @@ $(document).ready(function () {
 	/// PRODUCT DETAIL ///
 	show_more_product_detail();
 	/// END PRODUCT DETAIL ///
+	
+	
+	/// SUPPORT CUSTOMER ///
+	show_more_supprt_cus()
+	/// END OF SUPPORT CUSTOMER ///
+	
+	
+	/// NEWS DETAIL ///
+	createNewsSocial1();
+	/// END OF NEWS DETAIL ///
+	news_photo();
 });
 $(window).resize(function () {
-
-	// marginheader();
 });
 ///////// END OF MAIN Control /////

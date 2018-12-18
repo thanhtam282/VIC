@@ -1,15 +1,33 @@
-section.canhcam-form-service-1(bg-img='./img/04_service_detail/service_detail_bg_form.png')
+section.canhcam-form-contact-1
 	.container
 		.row
 			.col
-				h2.head-title đăng ký tư vấn
-				p Điền vào form bên dưới để được Liên Việt VIC hỗ trợ tư vấn
+				.title
+					h2.head-title đăng ký tư vấn
+					p Quý khách vui lòng điền thông tin vào mẫu bên dưới và gửi những góp ý, thắc mắc cho Bảo Tàng Lịch Sử, chúng tôi sẽ phản hồi email của 
+						br
+						| Quý khách trong thời gian sớm nhất.
 		.row
 			.col-10.mx-auto
-				.wrap-form
-					#ctl00_mdl234_ctl00_pnlQuestions
-						.row
-							.col-lg-5.item
+				.row
+					.col-lg-4
+						.info(bg-img='./img/global/form_contact_bg.png')
+							figure
+								img.img-fluid(src='./img/global/logo.png', alt='')
+								figcaption
+									p Địa chỉ: 
+										span Địa chỉ: Số 8-10, Bàu Cát, Phường 14, Quận Tân Bình, Tp Hồ Chí Minh
+									p Điện thoại: 
+										span 028 3860 8969
+									p Fax: 
+										span 0283860 8339
+									p Email: 
+										span lienviet@vicco.vn
+
+
+					.col-lg-8
+						.wrap-form
+							#ctl00_mdl234_ctl00_pnlQuestions
 								.form-group.qtext
 									input( type="text" placeholder="Họ và tên")
 								.form-group.qtext
@@ -18,7 +36,6 @@ section.canhcam-form-service-1(bg-img='./img/04_service_detail/service_detail_bg
 									input( type="text" placeholder="Số điện thoại")
 								.form-group.qtext
 									input( type="text" placeholder="Tiêu đề")
-							.col-lg-7.item
 								.form-group.qparagraph 
 									textarea(name="Nội dung",placeholder="Nội dung",  rows="8")
 								.form-group.frm-captcha

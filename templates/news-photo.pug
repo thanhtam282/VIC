@@ -1,0 +1,18 @@
+extends _layout/_layout.pug
+
+block var
+	- title = 'news-photo'
+	- bodyClass = 'news-photo-page'
+
+block header
+	include ../lib/header/h-1/index.pug
+block main
+	include ../lib/banner/b-1/index.pug
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/news-list/nl-1/index.pug
+	include ../lib/news-photo/np-1/index.pug
+	//- include ../lib/news-photo/np-2/index.pug
+	//- include ../lib/news-photo/nl-3/index.pug
+	//- include ../lib/news-photo/nl-4/index.pug
+block footer
+	include ../lib/footer/f-1/index.pug
