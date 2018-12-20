@@ -10,7 +10,13 @@
 	ul
 		justify-content: center
 		align-items: center
+		+media-breakpoint-down(sm)
+			flex-direction: column
+			
 		li
+			+media-breakpoint-down(sm)
+				width: 100%
+				+mar(2px 0)
 			+mar(0 5px)
 			a
 				text-transform: uppercase
@@ -20,10 +26,11 @@
 				color: color-rgba(color-get($mau,text-3),.5)
 				border-radius: r(25px)
 				transition: .3s all ease-in-out
-				&:hover
-					background: color-get($mau, dark)
-					color: color-get($mau,trang)
-					border: 2px solid color-get($mau,dark)
+				+media-breakpoint-down(md)
+					&:hover
+						background: color-get($mau, dark)
+						color: color-get($mau,trang)
+						border: 2px solid color-get($mau,dark)
 			&.active
 				a
 					+pad(r(14px) r(40px))
@@ -31,4 +38,5 @@
 					color: color-get($mau,trang)
 					font-weight: 600
 					border: 0
+
 			

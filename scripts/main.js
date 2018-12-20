@@ -188,16 +188,16 @@ function slider_product_detail() {
 
 function show_more_product_detail() {
 
-$('.canhcam-product-detail-3  .detail .btn-more ').each(function(){
-	$('.canhcam-product-detail-3  .detail .block-more').slideUp()
-	$(this).on('click', (function(){
-	$('.canhcam-product-detail-3 .detail').toggleClass('active');
-	// $('.canhcam-product-detail-3  .detail .btn-more ').hide()
-	$('.canhcam-product-detail-3  .detail .block-more').slideToggle()
-		$('.canhcam-product-detail-3 .detail .btn-more').text('XEM THÊM');
-	$('.canhcam-product-detail-3 .detail.active .btn-more').text('THU GỌN');
-}))
-})
+	$('.canhcam-product-detail-3  .detail .btn-more ').each(function () {
+		$('.canhcam-product-detail-3  .detail .block-more').slideUp()
+		$(this).on('click', (function () {
+			$('.canhcam-product-detail-3 .detail').toggleClass('active');
+			// $('.canhcam-product-detail-3  .detail .btn-more ').hide()
+			$('.canhcam-product-detail-3  .detail .block-more').slideToggle()
+			$('.canhcam-product-detail-3 .detail .btn-more').text('XEM THÊM');
+			$('.canhcam-product-detail-3 .detail.active .btn-more').text('THU GỌN');
+		}))
+	})
 };
 
 ////// END OF PRODUCT DETAIL ////////
@@ -205,15 +205,15 @@ $('.canhcam-product-detail-3  .detail .btn-more ').each(function(){
 
 ////// SUPPORT CUSTOMER ////////
 function show_more_supprt_cus() {
-	$('.canhcam-support-cus-1 .canhcam-kl-1 .item .name').each(function(){
+	$('.canhcam-support-cus-1 .canhcam-kl-1 .item .name').each(function () {
 		$(this).parents('.item').find('.introduce').slideUp();
-		$(this).on('click', (function(){
-			if ($(this).parents('.item').find('.introduce').length){
+		$(this).on('click', (function () {
+			if ($(this).parents('.item').find('.introduce').length) {
 				$(this).parents('.item').toggleClass('active')
 			}
 			$(this).parents('.item').find('.introduce').slideToggle();
-			
-			
+
+
 			$(this).parents('.item').siblings().find('.introduce').slideUp();
 			$(this).parents('.item').siblings().removeClass('active');
 		}))
@@ -223,6 +223,24 @@ function show_more_supprt_cus() {
 
 
 ////// END OF SUPPORT CUSTOMER ////////
+
+
+function show_more_project() {
+	$('.canhcam-project-1  .wrapper-img figcaption .btn-more ').each(function () {
+		$('.canhcam-project-1  .wrapper-img figcaption .detail .fullcontent').slideUp()
+		$(this).on('click', (function () {
+
+			// $('.canhcam-project-1  .wrapper-img figcaption .btn-more ').hide()
+			$(this).parents('figcaption').find('.fullcontent').slideToggle()
+			$(this).parents('figcaption').toggleClass('active');
+			$(this).text('XEM THÊM');
+			$('.canhcam-project-1 .wrapper-img figcaption.active .btn-more').text('THU GỌN');
+		}))
+	})
+}
+
+
+
 
 
 ////// NEWS DETAIL ////////
@@ -239,16 +257,16 @@ function createNewsSocial1() {
 
 function news_photo() {
 
-$(".canhcam-news-photo-1  .box-zoom").lightGallery({
-	thumbnail: true,
-	selector: 'a'
-});
+	$(".canhcam-news-photo-1  .box-zoom").lightGallery({
+		thumbnail: true,
+		selector: 'a'
+	});
 
-// $('.canhcam-news-photo-1 .wrapper-gallery').each(function() {
-// 	$(this).click(function() {
-// 		$(this).find('.hidden a:first-child').trigger('click')
-// 	})
-// });
+	// $('.canhcam-news-photo-1 .wrapper-gallery').each(function() {
+	// 	$(this).click(function() {
+	// 		$(this).find('.hidden a:first-child').trigger('click')
+	// 	})
+	// });
 }
 
 
@@ -263,10 +281,10 @@ $(document).ready(function () {
 
 
 
-// 	$(".canhcam-news-photo-1  .box-zoom").lightGallery({
-// 	thumbnail: true,
-// 	selector: 'a'
-// });
+	// 	$(".canhcam-news-photo-1  .box-zoom").lightGallery({
+	// 	thumbnail: true,
+	// 	selector: 'a'
+	// });
 	/// GLOBAL ///
 
 	/// END GLOBAL ///
@@ -294,18 +312,18 @@ $(document).ready(function () {
 	/// PRODUCT DETAIL ///
 	show_more_product_detail();
 	/// END PRODUCT DETAIL ///
-	
-	
+
+
 	/// SUPPORT CUSTOMER ///
-	show_more_supprt_cus()
+	show_more_supprt_cus();
+	show_more_project();
 	/// END OF SUPPORT CUSTOMER ///
-	
-	
+
+
 	/// NEWS DETAIL ///
 	createNewsSocial1();
 	/// END OF NEWS DETAIL ///
 	news_photo();
 });
-$(window).resize(function () {
-});
+$(window).resize(function () {});
 ///////// END OF MAIN Control /////

@@ -22,6 +22,8 @@
 					.spec-info
 						padding-left: 0
 						&:after
+							box-shadow: -8px 5px 10px 0px rgba(0, 0, 0, 0.3)
+
 							+media-breakpoint-up(md)
 								left:  calc((100vw - 720px)/-2 - 15px)
 							+media-breakpoint-up(lg)
@@ -101,6 +103,8 @@
 				text-align: left
 				align-items: flex-start
 				flex-direction: column
+				// box-shadow: -8px 5px 10px 0px rgba(0, 0, 0, 0.3)
+
 				position: relative
 				+pad(r(140px) 1rem r(140px) 0)
 				+media-breakpoint-down(md)
@@ -113,6 +117,8 @@
 					z-index: -1
 					content: ""
 					top: 0
+					box-shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.3)
+
 					left: -12rem
 					+wh(100%)
 					background: rgb(27,86,152)
@@ -129,6 +135,7 @@
 						display: none
 					
 				&:after
+					box-shadow:  11px 5px 10px 0 rgba(0,0,0,.3)
 					height: 100%
 					// width: 45rem
 					top: 0
@@ -155,17 +162,23 @@
 
 				h4
 					color: color-get($mau,trang)
+					padding-bottom: r(25px)
 				p
+					&:first-child()
+						+fz(r(18px))
+					+ p
+						padding-bottom: r(25px)
+
 					color: color-get($mau,trang)
-					+pad(r(25px) null)
+					// +pad(r(25px) null)
 
 					+fz(r(15px))
 					line-height: r(22px)
 					span
 						display: block
 						+fz(r(18px))
-						+media-breakpoint-up(lg)
-							white-space: nowrap
+						// +media-breakpoint-up(lg)
+						// 	white-space: nowrap
 				.btn-more
 					position: relative
 					font-weight: 300
