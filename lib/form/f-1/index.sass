@@ -40,6 +40,11 @@
 		.qparagraph
 			flex: 0 0 100%
 			+flex-center()
+			// height: 100%
+			align-items: flex-start
+			height: calc(100% - 23px)
+			textarea
+				height: 100%
 
 
 		#ctl00_mainContent_ctl04_captcha_SpamProtectorPanel
@@ -76,6 +81,8 @@
 				height: 40px
 			.frm-btn
 				width: 100%
+				+media-breakpoint-down(sm)
+					padding: 0 r(15px)
 				.frm-btn-submit
 					border: 0
 					text-transform: uppercase
@@ -87,16 +94,16 @@
 					height: r(50px)
 					+flex-center()
 					+media-breakpoint-down(xl)
-						width:  r(153px)
+						width:  r(201px)
 					+media-breakpoint-down(lg)
-						width: 6rem
+						width: 11rem
 					+media-breakpoint-down(md)
-						width: 5.5rem
+						width: r(65px)
 					+media-breakpoint-down(sm)
 						font-size: 1rem
 						width: 100%
 					@media (min-width: 1500px)
-						width: r(190px)
+						width: r(266px)
 				.frm-btn-reset
 					display: none
 
@@ -107,13 +114,16 @@
 			+flex-center()
 			justify-content: space-between
 			flex-direction: row-reverse
-			width: 67%
+			width: 74%
+			+media-breakpoint-down(xl)
+				margin-left: r(15px)
 			+media-breakpoint-down(lg)
 				width: 72%
 			+media-breakpoint-down(md)
 				width: 81%
 			+media-breakpoint-down(sm)
 				width: 100%
+				margin-right: r(15px)
 			.frm-captcha-input
 				+wh(100%)
 				+flex-center()
@@ -127,6 +137,14 @@
 					background: #ebebeb
 					+pad(0 1rem )
 					border-radius:  0.25rem
+			.RadCaptcha
+				position: relative
+				span
+					position: absolute
+					bottom: -2rem
+					left: r(15px)
+					color: #ff0000b3
+
 
 	#ctl00_mainContent_ctl04_captcha_ctl01
 		+flex-center()

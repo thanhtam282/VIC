@@ -20,7 +20,12 @@
 						right: 0
 						left: auto
 					.spec-info
+
 						padding-left: 0
+						+media-breakpoint-down(xl)
+							padding-left: 5rem
+						+media-breakpoint-down(lg)
+							padding-left: 0
 						&:after
 							box-shadow: -8px 5px 10px 0px rgba(0, 0, 0, 0.3)
 
@@ -104,12 +109,15 @@
 				align-items: flex-start
 				flex-direction: column
 				// box-shadow: -8px 5px 10px 0px rgba(0, 0, 0, 0.3)
-
+				width: r(350px)
 				position: relative
 				+pad(r(140px) 1rem r(140px) 0)
+				// +media-breakpoint-down(lg)
+				// 	padding-left: 5rem
 				+media-breakpoint-down(md)
 					+pad(r(60px) 1rem r(60px) 1.5rem)
 				+media-breakpoint-down(sm)
+					width: auto
 					+pad(1.5rem .5rem)
 				&:before
 					display: block
@@ -119,7 +127,7 @@
 					top: 0
 					box-shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.3)
 
-					left: -12rem
+					left: -12.5rem
 					+wh(100%)
 					background: rgb(27,86,152)
 					+media-breakpoint-down(xl)
@@ -164,10 +172,11 @@
 					color: color-get($mau,trang)
 					padding-bottom: r(25px)
 				p
+					+line(5)
 					&:first-child()
 						+fz(r(18px))
 					+ p
-						padding-bottom: r(25px)
+						margin-bottom: r(25px)
 
 					color: color-get($mau,trang)
 					// +pad(r(25px) null)

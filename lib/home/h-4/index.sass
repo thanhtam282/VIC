@@ -32,6 +32,8 @@
 					background: color-get($mau, trang)
 					+pad(r(20px)  r(20px) 1rem  r(20px))
 					h4
+						+line(2)
+						height: r(48px)
 						color: color-get($mau,main)
 						+fz(1rem)
 						line-height: r(24px)
@@ -42,6 +44,8 @@
 						+media-breakpoint-down(md)
 							+fz(r(14px))
 							line-height: r(20px)
+						+media-breakpoint-down(xs)
+							height: auto
 					p
 						+pad(r(20px) null null null)
 						margin-bottom: r(12px)
