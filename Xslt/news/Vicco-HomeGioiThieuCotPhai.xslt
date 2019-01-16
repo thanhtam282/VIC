@@ -5,7 +5,7 @@
 
     <xsl:template match="/">
         <div class="banner-info-wrapper">
-            <div class="banner" bg-img="/Data/Sites/1/skins/default/img/home/home_bg_1.png"></div>
+            <div class="banner" bg-img="/Data/Sites/1/media/img/home/home_bg_1.png"></div>
             <div class="spec-info">
                 <xsl:apply-templates select='/NewsList/News'></xsl:apply-templates>
             </div>
