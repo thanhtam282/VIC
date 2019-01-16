@@ -14,10 +14,10 @@
 			flex-direction: column
 			
 		li
+			+mar(0 5px)
 			+media-breakpoint-down(sm)
 				width: 100%
 				+mar(2px 0)
-			+mar(0 5px)
 			a
 				text-transform: uppercase
 				+pad(r(12px) r(40px))
@@ -26,6 +26,8 @@
 				color: color-rgba(color-get($mau,text-3),.5)
 				border-radius: r(25px)
 				transition: .3s all ease-in-out
+				+media-breakpoint-down(sm)
+					text-align: center
 				+media-breakpoint-down(md)
 					&:hover
 						background: color-get($mau, dark)

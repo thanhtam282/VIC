@@ -11,7 +11,7 @@
         <section class="canhcam-product-2" bg-img="Data/Sites/1/skins/default/img/home/home_bg_2.png">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 order-2 order-md-1">
                         <div class="full-content">
                             <h4 class="head-title">
                                 <xsl:value-of select='Title'></xsl:value-of>
@@ -27,7 +27,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-7 order-1 order-md-2">
                         <figure>
                             <img class="img-fluid">
                             <xsl:attribute name='src'>

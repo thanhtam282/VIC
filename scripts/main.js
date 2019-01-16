@@ -269,7 +269,22 @@ function news_photo() {
 	// });
 }
 
-
+function addClassByLocation() {
+	let i = window.location.pathname
+	if (i.search('gioi-thieu') > 0) {
+		$('.Module.Module-142 .zonelist .nav-item:first-child .nav-link').addClass('active')
+	} else if (i.search('san-pham-4') > 0) {
+		$('.Module.Module-142 .zonelist .nav-item:nth-child(2) .nav-link').addClass('active')
+	} else if (i.search('dich-vu') > 0) {
+		$('.Module.Module-142 .zonelist .nav-item:nth-child(3) .nav-link').addClass('active')
+	} else if (i.search('du-an') > 0) {
+		$('.Module.Module-142 .zonelist .nav-item:nth-child(4) .nav-link').addClass('active')
+	} else if (i.search('tin-tuc-1') > 0) {
+		$('.Module.Module-142 .zonelist .nav-item:nth-child(6) .nav-link').addClass('active')
+	} else if (i.search('tuyen-dung') > 0) {
+		$('.Module.Module-142 .zonelist .nav-item:nth-child(7) .nav-link').addClass('active')
+	}
+}
 
 ///////// MAIN Control /////
 $(document).ready(function () {
@@ -286,7 +301,7 @@ $(document).ready(function () {
 	// 	selector: 'a'
 	// });
 	/// GLOBAL ///
-
+	addClassByLocation()
 	/// END GLOBAL ///
 	/// HEADER ///
 	display_search();

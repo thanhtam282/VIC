@@ -8,9 +8,18 @@
 @import ../node_modules/bootstrap/scss/bootstrap
 @import ../bower_components/k-sass-core/dist/sass/k-sass-core-only
 .canhcam-header-1
-	.Module, .ModuleContent
+	+media-breakpoint-up(lg)
+		.Module, .ModuleContent
+			height: 100%
+	.Module-142
+		width: 100%
+	.Module-138
 		height: 100%
-
+		.ModuleContent
+			height: 100%
+	+media-breakpoint-down(md)
+		.Module-143
+			width: 100%
 
 .news-detail-page
 	background: #f2f2f2

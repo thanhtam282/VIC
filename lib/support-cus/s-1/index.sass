@@ -26,6 +26,8 @@
 					background: color-get($mau, trang)
 					+pad(1rem r(20px))
 					display: flex
+					+media-breakpoint-down(sm)
+						+pad(1rem r(30px) 1rem r(20px))
 					h2
 						font-weight: 500
 						+fz(r(15px))
@@ -38,6 +40,8 @@
 							+pos(abs, 50% 0 null null)
 							transform: translateY(-50%)
 							+fz(r(20px))
+							+media-breakpoint-down(sm)
+								right: r(-20px)
 				&.active
 					box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.35)
 					.name
@@ -47,6 +51,8 @@
 							&:after
 								content: 'arrow_drop_up'
 								transition: .3s all ease-in-out
+								+media-breakpoint-down(sm)
+									right: r(-20px)
 
 				.introduce
 					background: color-get($mau, trang)

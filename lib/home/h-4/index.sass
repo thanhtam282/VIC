@@ -94,11 +94,11 @@
 			transform: translateY(-50%)
 			position: absolute
 			pointer-events: none
-			@media (max-width: 578px)
-				position: initial
-				top: auto
-				transform: none
-				position: relative
+			// @media (max-width: 578px)
+			// 	position: initial
+			// 	top: auto
+			// 	transform: none
+			// 	position: relative
 			.owl-prev, .owl-next
 				pointer-events: all
 				margin: 0
@@ -107,19 +107,19 @@
 				color: color-get($mau,xam-c)
 				position: absolute
 				width: 0
-				@media (max-width: 578px)
-					position: initial
-					+wh(3rem)
-					background: color-get($mau, main)
-					+mar(2rem .5rem )
+				// @media (max-width: 578px)
+				// 	position: initial
+				// 	+wh(3rem)
+				// 	background: color-get($mau, main)
+				// 	+mar(2rem .5rem )
 				span
 					font-size: 2.5rem
 					+media-breakpoint-down(sm)
-						font-size: r(20px)
-					@media (max-width: 578px)
-						position: absolute
-						top: 50%
-						transform: translate(-50%, -50%)
+						font-size: 2rem
+					// @media (max-width: 578px)
+					// 	position: absolute
+					// 	top: 50%
+					// 	transform: translate(-50%, -50%)
 				&:hover, &:active, &:focus
 					outline: none
 			.owl-prev
@@ -130,7 +130,7 @@
 				+media-breakpoint-down(md)
 					left: -2rem
 				@media (max-width: 578px)
-					left: auto
+					left: 0
 				
 			.owl-next
 				@media (min-width: 992px)
@@ -140,4 +140,4 @@
 				+media-breakpoint-down(md)
 					right: 0
 				@media (max-width: 578px)
-					right: auto
+					right: 1.5rem

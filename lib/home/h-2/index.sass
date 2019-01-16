@@ -14,6 +14,8 @@
 			align-items: flex-end
 			text-align: right
 			+pad(2rem null)
+		+media-breakpoint-down(sm)
+			align-items: center
 		.head-title
 			text-align: left
 			+fz(r(30px))
@@ -29,6 +31,7 @@
 			color: color-get($mau,text-3)
 			+media-breakpoint-down(sm)
 				+pad(1.5rem null 1.5rem null)
+				text-align: center
 			span
 				padding-bottom: .2rem
 				display: block
