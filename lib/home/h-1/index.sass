@@ -41,9 +41,14 @@
 				height: 100%
 				z-index: -2
 				left: -7rem
-				+media-breakpoint-down(sm)
-					width: 100vw
-					margin-left: calc(-50vw + 50%)
+				+media-breakpoint-up(xs)
+					margin-left: 0
+					width: 150vw
+					left: -6rem
+				+media-breakpoint-up(sm)
+					width: 150vw
+					left: -8rem
+					margin-left: 0
 				+media-breakpoint-up(lg)
 					left: -8rem
 					display: block
@@ -52,7 +57,7 @@
 				+media-breakpoint-up(xl)
 					width: calc((100vw - 1140px)/2 + 433px)
 					width: 200%
-					left: -12rem
+					left: -18rem
 				@media (min-width: 1500px)
 					// left: -9rem
 					width: calc((100vw - 1400px)/ 2 + 520px)
