@@ -12,7 +12,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 order-2 order-md-1">
-                        <div class="full-content">
+                        <div class="full-content" data-aos="fade-right">
                             <h4 class="head-title">
                                 <xsl:value-of select='Title'></xsl:value-of>
                             </h4>
@@ -27,7 +27,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-7 order-1 order-md-2">
+                    <div class="col-lg-7 order-1 order-md-2" data-aos="fade-left">
                         <figure>
                             <img class="img-fluid">
                             <xsl:attribute name='src'>

@@ -10,13 +10,13 @@
     <xsl:template match="News">
         <div class="wrapper">
             <div class="banner-info-wrapper">
-                <div class="banner">
+                <div class="banner" data-aos="fade-right">
                     <xsl:attribute name='bg-img'>
                         <xsl:value-of select='ImageUrl'></xsl:value-of>
                     </xsl:attribute>
                 </div>
             </div>
-            <div class="content">
+            <div class="content" data-aos="fade-left">
                 <div class="spec-info">
                     <h4 class="head-title">
                         <xsl:value-of select='Title'></xsl:value-of>
