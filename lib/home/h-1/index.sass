@@ -29,7 +29,12 @@
 				+media-breakpoint-up(md)
 					background: color-get($mau, trang)
 					content: ''
+			&:hover
+				.banner
+					+media-breakpoint-up(lg)
+						transform: scale(1.1)
 			.banner
+				transition: .3s all ease-in-out
 				background-position: center center
 				background-size: cover
 				// background-image: url('../img/home/home_bg_1.png')
@@ -66,6 +71,8 @@
 			margin-left: 10px
 			flex: 0 0 65%
 			display: flex
+			position: relative
+			z-index: 9
 			+media-breakpoint-down(sm)
 				flex: 0 0 100%
 				position: relative
@@ -121,6 +128,11 @@
 					display: flex
 					align-items: center
 					border-bottom: 1px solid color-rgba(color-get($mau,trang),.2)
+					img
+						transition: .3s all ease-in-out
+					&:hover
+						img
+							filter: brightness(0) invert(1)
 					figcaption
 						h4
 							padding-left: 1rem

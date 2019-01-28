@@ -11,6 +11,7 @@
 		"bower_components/lightgallery/dist/css/lightgallery.min.css",
 		"bower_components/lightgallery/dist/css/lg-transitions.min.css",
 		"bower_components/fancybox/dist/jquery.fancybox.min.css",
+		"bower_components/aos/dist/aos.css",
 		"bower_components/offline/themes/offline-language-english.css"
 	],
 	"scripts":[
@@ -21,6 +22,7 @@
 		"plugins/mapping-listener.js",
 		"bower_components/offline/offline.min.js",
 		"bower_components/lightgallery/dist/js/lightgallery-all.min.js",
+		"bower_components/aos/dist/aos.js",
 		"bower_components/slick-carousel/slick/slick.min.js",
 		"bower_components/owl.carousel/dist/owl.carousel.min.js",
 		"bower_components/fancybox/dist/jquery.fancybox.min.js",

@@ -34,6 +34,7 @@
     "k-sass-core": "^6.0.4",
     "sticky-footer": "https://github.com/cferdinandi/sticky-footer.git#^4.2.0",
     "slick-carousel": "^1.8.1",
-    "lightgallery": "^1.6.11"
+    "lightgallery": "^1.6.11",
+    "aos": "^2.3.4"
   }
 }

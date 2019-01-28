@@ -5,7 +5,7 @@
 
     <xsl:template match="/">
         <div class="banner-info-wrapper">
-            <div class="banner" bg-img="/Data/Sites/1/media/img/home/home_bg_1.png"></div>
+            <div class="banner"  data-aos="fade-down" bg-img="/Data/Sites/1/media/img/home/home_bg_1.png"></div>
             <div class="spec-info">
                 <xsl:apply-templates select='/NewsList/News'></xsl:apply-templates>
             </div>
@@ -13,7 +13,10 @@
     </xsl:template>
 
     <xsl:template match="News">
-        <figure>
+        <figure data-aos="fade-up" data-aos-delay="200" >
+            <xsl:attribute name='data-aos-delay'>
+            <xsl:value-of select='position()*200 - 200'></xsl:value-of>
+            </xsl:attribute>
             <img>
             <xsl:attribute name='src'>
                 <xsl:value-of select='ImageUrl'></xsl:value-of>

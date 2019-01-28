@@ -33,8 +33,11 @@
     </xsl:template>
 
     <xsl:template match='News' mode="ZoneNews1">
-        <div class="col-md-6 col-lg-3 feature">
-            <figure>
+        <div class="col-md-6 col-lg-3 feature" data-aos="fade-up" data-aos-delay="200">
+            <xsl:attribute name='data-aos-delay'>
+            <xsl:value-of select='position()*200 - 200'></xsl:value-of>
+            </xsl:attribute>
+        <figure  >
                 <img class="img-fluid">
                 <xsl:attribute name='src'>
                     <xsl:value-of select='ImageUrl'></xsl:value-of>
@@ -55,13 +58,13 @@
     <xsl:template match='News' mode="ZoneNews2">
         <div class="wrapper">
             <div class="banner-info-wrapper">
-                <div class="banner">
+                <div class="banner" data-aos="fade-right">
                 <xsl:attribute name='bg-img'>
                     <xsl:value-of select='ImageUrl'></xsl:value-of>
                 </xsl:attribute>
                 </div>
             </div>
-            <div class="content">
+            <div class="content" data-aos="fade-left">
                 <div class="banner" bg-img="Data/Sites/1/skins/default/img/02_intro/intro_bg_1.png">
                 </div>
                 <div class="spec-info">

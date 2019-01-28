@@ -86,9 +86,9 @@ function slider_home() {
 			// slickPlay: true,
 			// slickPause: true,
 			autoplaySpeed: 4000,
-			dots: true,
+			dots: false,
 			infinite: true,
-			speed: 300,
+			speed: 600,
 			arrows: false,
 			slidesToShow: 1,
 			slidesToScroll: 1,
@@ -288,18 +288,7 @@ function addClassByLocation() {
 
 ///////// MAIN Control /////
 $(document).ready(function () {
-	// $('.canhcam-news-photo-1  .box-zoom a').fancybox({
-	// 	width: 640,
-	// 	height: 400,
-	// 	type: 'iframe'
-	// });
 
-
-
-	// 	$(".canhcam-news-photo-1  .box-zoom").lightGallery({
-	// 	thumbnail: true,
-	// 	selector: 'a'
-	// });
 	/// GLOBAL ///
 	addClassByLocation()
 	/// END GLOBAL ///
@@ -339,6 +328,20 @@ $(document).ready(function () {
 	createNewsSocial1();
 	/// END OF NEWS DETAIL ///
 	news_photo();
+
+	if ($(window).width() < 992 ){
+		AOS.init({
+			disable: true
+		});
+		
+	} else {
+		
+		AOS.init({
+			disable: false,
+			duration: 1500
+		});
+		
+	}
 });
 $(window).resize(function () {});
 ///////// END OF MAIN Control /////

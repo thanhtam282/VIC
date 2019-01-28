@@ -6,7 +6,7 @@
     <xsl:template match="/">
         <div class="row">
             <div class="col">
-                <h4 class="head-title">
+                <h4 class="head-title" data-aos="fade-down">
                     <xsl:value-of select='/NewsList/ModuleTitle'></xsl:value-of>
                 </h4>
             </div>
@@ -21,7 +21,10 @@
     </xsl:template>
     <xsl:template match="News">
         <div class="item">
-            <figure>
+        <figure data-aos="fade-left" data-aos-delay="200" >
+                    <xsl:attribute name='data-aos-delay'>
+            <xsl:value-of select='position()*200 - 200'></xsl:value-of>
+            </xsl:attribute>
                 <a>
                     <xsl:attribute name='href'>
                         <xsl:value-of select='Url'></xsl:value-of>

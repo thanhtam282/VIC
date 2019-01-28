@@ -9,8 +9,11 @@
         </div>
     </xsl:template>
     <xsl:template match="News">
-        <div class="item">
-            <figure>
+        <div class="item" data-aos="fade-up" data-aos-delay="200">
+                 <xsl:attribute name='data-aos-delay'>
+            <xsl:value-of select='position()*200 - 200'></xsl:value-of>
+            </xsl:attribute>
+        <figure  >
                 <img class="img-fluid">
                 <xsl:attribute name='src'>
                     <xsl:value-of select='ImageUrl'></xsl:value-of>
